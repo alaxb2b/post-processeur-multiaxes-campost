@@ -1,0 +1,272 @@
+Corporation des Technologies ICAM
+(c) Copyright 2022
+
+CAM-POST GENER Version 24.0-2235 Build 30735 win64
+ICAM_LIB:     C:\PROGRA~1\ICAMV2~1
+ICAM_APPDATA: C:\PROGRA~1\ICAMV2~1
+
+SOURCE:       C:\Users\AU91520\OneDrive - ETS\SYS856\Nouveau dossier\fmotsPP-4.txt
+SORTIE:       C:\Users\AU91520\OneDrive - ETS\SYS856\Nouveau dossier\fmotsPP-4.tap
+POST:         ZERA2025.240;1, Creer 27-Oct-2024 22:34:58.66
+DATABASE:     C:\Users\AU91520\AppData\Local\Temp\icam_tmpdb_2.dbf
+*** Erreur lors de l'ouverture du fichier words specifié ***
+DEF:          C:\PROGRA~1\ICAMV2~1\ICAM.DEF
+*** Erreur lors de l'ouverture du fichier DEF specifié ***
+KIT:          Aucun kit d'interface selectionné
+WORDS:
+
+LICENCE:      p5
+
+PID:
+
+AVIS:
+Ce produit est en cours d'exécution avec une licence limitée dans le temps,
+valable jusqu'au 14-dec-2025. Contactez la Corporation des Technologies ICAM
+pour obtenir des informations supplémentaires concernant votre contrat de
+licence. Vous pouvez nous joindre par téléphone au 1(514)697-8033.
+
+Corp. des Technologies ICAM     Z E R A 2 0 2 5              27-Oct-24  22:35:08
+(c) Copyright 2022                                                        Page 1
+                           XYZ Mill/FANUC MODEL 16 M
+
+                              MOTSPP, Automne 2024
+
+CODE NC
+--------------------------------------------------------------------------------
+Message:PPFUN: Le numero de programme O doit etre inferieur a 6300
+        SEVERITE(01) INS(0) ENRCL(24) OUTIL(0)
+
+O0000
+(Alaeeddine ZERROUQ)
+N1 G20 G40 G49 G50 G64 G69
+N2 G80 G90 M79 M69
+N3 G91 G28 G00 Z0.
+N4 X0. Y0.
+N5 T0
+N6 T0 M6
+N7 T13
+
+TEMPS SECTION 00:00:16  RAPIDE 00:00:16  AVANCE 00:00:00  DIVERS 00:00:00
+
+N8 T13 M6
+N9 T0
+(CE FICHIER EST UTILE POUR VERIFIER LES MOTS DE PP)
+(MODIFIER LE QUESTIONNAIRE POUR OBTENiR LE CODE G DU PROFESSEUR)
+(ECRIRE UNE MACRO SI CELLE-CI EST REQUISE, TEL QUE SPECIFIE EN ME)
+N10 M68 M78
+N11 S12000 M3
+N12 G90 G54 G00 X-2.5188 Y-1.55 M8
+N13 G43 Z1.2 H13
+N14 M10
+(***********************************************************)
+(MACRO REQUISE POUR PREFUN)
+(***********************************************************)
+(le code G10 ne devrait pas sortir; PREFUN NON PERMIS)
+
+Avertis:PPFUN: Le code G utilise n existe pas
+        SEVERITE(07) INS(29) ENRCL(44) OUTIL(13)
+
+(***********************************************************)
+(MACRO REQUISE POUR INSERT)
+(***********************************************************)
+(INSERT NON PERMIS)
+N15 G94 G41 G01 X0. Y-3.3315 Z1.0118 D13 F30. M50
+N16 M1
+N17 G40 G01 Y-3.6083
+N18 G17
+N19 G03 X0. Y-2.4547 J.5768 R.5768
+N20 X0. Y-3.6083 J-.5768 R.5768
+G01 Z2.3406
+G00 X4.5 Y-3.
+Z.45
+X-2.5188 Y-1.55
+(********************************************************)
+(BESOIN DE MACRO AVANT CYCLE POUR REGLER LE PARAMETRE "Z")
+(********************************************************)
+--------------------------------------------------------------------------------
+Segment: 1                       Taille: 1.2 Kb                  Temps: 00:01:23
+Corp. des Technologies ICAM     Z E R A 2 0 2 5              27-Oct-24  22:35:08
+(c) Copyright 2022                                                        Page 2
+                              MOTSPP, Automne 2024
+
+CODE NC
+--------------------------------------------------------------------------------
+N21 G99 G83 X-1.4142 Y1.4142 Z-3.45 R.3 Q.1 F75.
+N22 X1.4142
+N23 Y-1.4142
+N24 X-1.4142
+N25 G80
+N26 G00 Z.5
+N27 X-1.4142 Y-1.4142
+(***********************************************************)
+(          MOUVEMENT DE RETRAIT D'OUTIL EN RAPID)
+(***********************************************************)
+N28 Z15. M9 M5
+N29 X-1.5 Y-1.4
+(***********************************************************)
+(          MOUVEMENT D'APPROCHE D'OUTIL EN RAPID)
+(***********************************************************)
+N30 X-1. Y-.5
+N31 Z10.
+N32 G01 X-.9251 Y-.8097 F90.
+N33 X-.8605 Y-.8695 Z12.
+N34 X-.7489 Y-1.0053 Z10.
+N35 X0. Y-3.6083 Z1.0118
+N36 G03 X0. Y-2.4547 J.5768 R.5768
+N37 X0. Y-3.6083 J-.5768 R.5768
+N38 M0
+(***********************************************************)
+(Macro GOPARK)
+(***********************************************************)
+N39 G91 G28 G00 Z0.
+N40 X0. Y-3.6083
+(OPERATEUR : SVP verifiez l usure d outil)
+N41 M1
+N42 G00 X-1. Y-.5
+N43 G43 Z15. H13
+N44 X-1.4142 Y1.4142
+N45 Z.5
+(**************************************************************)
+(MACRO BREAK)
+(**************************************************************)
+#N46 G91 G28 G00 Z0.
+#N47 X0. Y0.
+
+TEMPS SECTION 00:04:24  RAPIDE 00:03:38  AVANCE 00:00:46  DIVERS 00:00:00
+
+#N48 T13 M6
+#N49 T0
+#N50 G90 G54 G00 X-2. Y2.
+#N51 G43 Z.125 H13
+N52 G01 X-1.4142 Y1.4142 F90.
+N53 X1.4142
+N54 Y-1.4142
+N55 X-1.4142
+N56 G91 G28 G00 Z0. M5
+--------------------------------------------------------------------------------
+Segment: 1                       Taille: 2.5 Kb                  Temps: 00:05:00
+Corp. des Technologies ICAM     Z E R A 2 0 2 5              27-Oct-24  22:35:08
+(c) Copyright 2022                                                        Page 3
+                              MOTSPP, Automne 2024
+
+CODE NC
+--------------------------------------------------------------------------------
+N57 X0. Y0.
+
+TEMPS SECTION 00:00:20  RAPIDE 00:00:20  AVANCE 00:00:00  DIVERS 00:00:00
+
+N58 T0 M6
+N59 M30
+(fin de programme)
+
+TEMPS SECTION 00:00:00  RAPIDE 00:00:00  AVANCE 00:00:00  DIVERS 00:00:00
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--------------------------------------------------------------------------------
+Segment: 1                       Taille: 2.5 Kb                  Temps: 00:05:00
+Corp. des Technologies ICAM     Z E R A 2 0 2 5              27-Oct-24  22:35:08
+(c) Copyright 2022                                                        Page 4
+                              MOTSPP, Automne 2024
+
+SOMMAIRE OUTILLAGE:
+
+    POCHE #  OUTIL # DIAMETRE LONGUEUR  ATTACHE  COMP-LG COMP-DIA
+
+         13       ND       ND   0.0000       ND        0       13
+
+    POCHE #  AV-MINI  AV-MAXI     TRAV    RAPID   DIVERS    TOTAL
+
+         13    30.00    90.00 00:00:46 00:03:58 00:00:00 00:04:44
+
+
+SOMMAIRE PARCOURS OUTIL:
+
+     AXES         MINIMUM       MAXIMUM         TOTAL         ACCUM
+
+     X            -2.5188       28.0000       30.5188      233.4844
+     Y            -3.6083       54.0000       57.6083      412.1994
+     Z            -3.4500       15.0000       18.4500      724.6090
+     A'            0.000         0.000         0.000         0.000
+     B'            0.000         0.000         0.000         0.000
+
+
+SOMMAIRE TEMPS D'USINAGE:
+
+     TYPE        HH:MM:SS   POURCENTAGE
+
+     RAPIDE      00:04:14        84.730
+     AVANCE      00:00:46        15.270
+     DIVERS      00:00:00         0.000
+
+     TOTAL       00:05:00
+
+
+SOMMAIRE DIAGNOSTIQUE:
+
+     TYPE           TOTAL
+
+     MESSAGE            1
+     AVERTIS            1
+     ERREUR             0
+     FATALE             0
+
+     TOTAL              2
+
+     MESSAGES
+
+        PPFUN: Le numero de programme O doit etre inferieur a 6300
+        NUMERR(0) OCCURS(1) PAGE(1) OUTIL(0)
+
+     AVERTIS
+
+        PPFUN: Le code G utilise n existe pas
+        NUMERR(0) OCCURS(1) PAGE(1) OUTIL(13)
+
+
+FIN SEGMENT # 1, 2.5 Kb
+
+CAM-POST GENER Traitement termine avec avertissement
+
+Temps utilise = 0.021 minutes.
+

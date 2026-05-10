@@ -1,0 +1,271 @@
+Corporation des Technologies ICAM
+(c) Copyright 2022
+
+CAM-POST GENER Version 24.0-2235 Build 30735 win64
+ICAM_LIB:     C:\PROGRA~1\ICAMV2~1
+ICAM_APPDATA: C:\PROGRA~1\ICAMV2~1
+
+SOURCE:       C:\Users\AU91520\OneDrive - ETS\SYS856\Nouveau dossier\f3axes.ncl
+SORTIE:       C:\Users\AU91520\OneDrive - ETS\SYS856\Nouveau dossier\f3axes.tap
+POST:         ZERA2025.240;1, Creer 27-Oct-2024 22:34:20.94
+DATABASE:     C:\Users\AU91520\AppData\Local\Temp\icam_tmpdb_2.dbf
+*** Erreur lors de l'ouverture du fichier words specifié ***
+DEF:          C:\PROGRA~1\ICAMV2~1\ICAM.DEF
+*** Erreur lors de l'ouverture du fichier DEF specifié ***
+KIT:          Aucun kit d'interface selectionné
+WORDS:
+
+LICENCE:      p5
+
+PID:
+
+AVIS:
+Ce produit est en cours d'exécution avec une licence limitée dans le temps,
+valable jusqu'au 14-dec-2025. Contactez la Corporation des Technologies ICAM
+pour obtenir des informations supplémentaires concernant votre contrat de
+licence. Vous pouvez nous joindre par téléphone au 1(514)697-8033.
+
+Corp. des Technologies ICAM     Z E R A 2 0 2 5              27-Oct-24  22:34:32
+(c) Copyright 2022                                                        Page 1
+                           XYZ Mill/FANUC MODEL 16 M
+
+                              3AXES, Automne 2024
+
+CODE NC
+--------------------------------------------------------------------------------
+O6300
+(Alaeeddine ZERROUQ)
+N1 G20 G40 G49 G50 G64 G69
+N2 G80 G90 M79 M69
+N3 G91 G28 G00 Z0.
+N4 X0. Y0.
+N5 T0
+N6 T0 M6
+N7 T5
+
+TEMPS SECTION 00:00:16  RAPIDE 00:00:16  AVANCE 00:00:00  DIVERS 00:00:00
+
+N8 T5 M6
+N9 T15
+
+Avertis:Non-standard continuation of a comment line encountered in APT file.
+        SEVERITE(04) INS(11) ENRCL(10) NUMERR(01640007) OUTIL(5)
+
+N10 S5000 M3
+N11 G90 G54 G00 X0. Y-3.3315 M8
+N12 G43 Z2.3406 H5
+N13 Z1.3406
+N14 G94 G01 Z1.0118 F80.
+N15 Y-3.6083
+N16 G17
+N17 G03 X0. Y-2.4547 J.5768 R.5768
+N18 X0. Y-3.6083 J-.5768 R.5768
+N19 G01 Z2.3406
+N20 G91 G28 G00 Z0. M5
+N21 X0. Y0.
+
+TEMPS SECTION 00:00:22  RAPIDE 00:00:18  AVANCE 00:00:04  DIVERS 00:00:00
+
+N22 T15 M6
+N23 T10
+
+Avertis:Non-standard continuation of a comment line encountered in APT file.
+        SEVERITE(04) INS(33) ENRCL(41) NUMERR(01640007) OUTIL(15)
+
+N24 S12000 M3
+N25 G90 G54 G00 X.8465 Y-3.0315
+N26 G43 Z2.3406 H15
+N27 Z1.3406
+N28 G01 Z1.0906 F100.
+N29 X.8435 Y-2.9604
+N30 X.8345 Y-2.8897
+N31 X.8196 Y-2.8201
+N32 X.799 Y-2.7519
+N33 X.7726 Y-2.6858
+N34 X.7408 Y-2.622
+--------------------------------------------------------------------------------
+Segment: 1                       Taille: 0.6 Kb                  Temps: 00:00:41
+Corp. des Technologies ICAM     Z E R A 2 0 2 5              27-Oct-24  22:34:32
+(c) Copyright 2022                                                        Page 2
+                              3AXES, Automne 2024
+
+CODE NC
+--------------------------------------------------------------------------------
+N35 X.7038 Y-2.5612
+N36 X.6618 Y-2.5037
+N37 X.6151 Y-2.45
+N38 X.564 Y-2.4003
+N39 X.509 Y-2.3552
+N40 X.4503 Y-2.3148
+N41 G00 Z2.3406
+N42 X.4724 Y2.4612
+N43 X.5 Y2.5
+N44 Z1.3406
+N45 G01 X.4724 Y2.4612 Z1.0906
+N46 X.4688 Y2.5194
+N47 X.4581 Y2.5766
+N48 X.4405 Y2.632
+N49 X.4163 Y2.6847
+N50 X.3858 Y2.7339
+N51 X.3496 Y2.779
+N52 X.3082 Y2.8193
+N53 X.2622 Y2.8543
+N54 X.2122 Y2.8833
+N55 X.159 Y2.9061
+N56 X.1034 Y2.9222
+N57 X.0462 Y2.9314
+N58 X.3706 Y2.4612 Z2.3406
+N59 G91 G28 G00 Z0. M9 M5
+N60 X0. Y0.
+
+TEMPS SECTION 00:00:22  RAPIDE 00:00:20  AVANCE 00:00:02  DIVERS 00:00:00
+
+N61 T10 M6
+N62 T0
+
+Avertis:Non-standard continuation of a comment line encountered in APT file.
+        SEVERITE(04) INS(80) ENRCL(125) NUMERR(01640007) OUTIL(10)
+
+N63 S7000 M3
+N64 G90 G54 G00 X-.1076 Y-1.1772
+N65 G43 Z2.3406 H10
+N66 Z1.2618
+N67 G01 X-.0497 Y-.6404 Z1.1666 F100.
+N68 X0. Y-.6458 Z1.1578
+N69 X.0538 Y-1.1448 Z1.0693
+N70 X-.0538 Z1.0503
+N71 X0. Y-.6458 Z.9618
+N72 X-.0538 Y-1.1448
+N73 X.0538
+N74 X0. Y-.6458
+N75 X-.0497 Y-.6404
+N76 X-.1098 Y-1.1973
+N77 G17
+N78 G02 X.1098 Y-1.1973 I.1098 J-1.8342 R-1.8375
+N79 G01 X0. Y-.1795
+--------------------------------------------------------------------------------
+Segment: 1                       Taille: 1.5 Kb                  Temps: 00:01:11
+Corp. des Technologies ICAM     Z E R A 2 0 2 5              27-Oct-24  22:34:32
+(c) Copyright 2022                                                        Page 3
+                              3AXES, Automne 2024
+
+CODE NC
+--------------------------------------------------------------------------------
+N80 X.031 Y-.1244
+N81 X0. Y.1631
+N82 X-.031 Y-.1244
+N83 X0. Y-.1795
+N84 X-.0497 Y-.6404
+N85 X-.1491 Y-.6297
+N86 X-.2223 Y-1.3083
+N87 G02 X.2223 Y-1.3083 I.2223 J-1.7232 R-1.7375
+N88 G01 X0. Y.753
+N89 X.031 Y.8082
+N90 X0. Y1.0956
+N91 X-.031 Y.8082
+N92 X0. Y.753
+N93 X-.1491 Y-.6297
+N94 X-.2486 Y-.619
+N95 X-.3359 Y-1.4288
+N96 X.0505 Y.9055 Z.77
+N97 G03 X-.0505 Y.9055 I-.0505 R.0505
+N98 G01 Z2.3406
+N99 G00 Z6.
+N100 X-.5462 Y1.8303
+N101 G91 G28 G00 Z0. M5
+N102 X0. Y0.
+
+TEMPS SECTION 00:00:41  RAPIDE 00:00:19  AVANCE 00:00:22  DIVERS 00:00:00
+
+N103 T0 M6
+N104 M30
+(fin de programme)
+
+TEMPS SECTION 00:00:00  RAPIDE 00:00:00  AVANCE 00:00:00  DIVERS 00:00:00
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--------------------------------------------------------------------------------
+Segment: 1                       Taille: 2.0 Kb                  Temps: 00:01:42
+Corp. des Technologies ICAM     Z E R A 2 0 2 5              27-Oct-24  22:34:32
+(c) Copyright 2022                                                        Page 4
+                              3AXES, Automne 2024
+
+SOMMAIRE OUTILLAGE:
+
+    POCHE #  OUTIL # DIAMETRE LONGUEUR  ATTACHE  COMP-LG COMP-DIA
+
+          5       ND       ND   0.0000       ND        0      NON
+         10       ND       ND   0.0000       ND        0      NON
+         15       ND       ND   0.0000       ND        0      NON
+
+    POCHE #  AV-MINI  AV-MAXI     TRAV    RAPID   DIVERS    TOTAL
+
+          5    80.00    80.00 00:00:04 00:00:18 00:00:00 00:00:22
+         10   100.00   100.00 00:00:22 00:00:19 00:00:00 00:00:41
+         15   100.00   100.00 00:00:02 00:00:20 00:00:00 00:00:22
+
+
+SOMMAIRE PARCOURS OUTIL:
+
+     AXES         MINIMUM       MAXIMUM         TOTAL         ACCUM
+
+     X            -1.8375       28.0000       29.8375      216.1119
+     Y            -4.8690       54.0000       58.8690      414.9398
+     Z             0.0000       14.0000       14.0000      101.7770
+     A'            0.000         0.000         0.000         0.000
+     B'            0.000         0.000         0.000         0.000
+
+
+SOMMAIRE TEMPS D'USINAGE:
+
+     TYPE        HH:MM:SS   POURCENTAGE
+
+     RAPIDE      00:01:13        71.779
+     AVANCE      00:00:29        28.221
+     DIVERS      00:00:00         0.000
+
+     TOTAL       00:01:42
+
+
+SOMMAIRE DIAGNOSTIQUE:
+
+     TYPE           TOTAL
+
+     MESSAGE            0
+     AVERTIS            3
+     ERREUR             0
+     FATALE             0
+
+     TOTAL              3
+
+     AVERTIS
+
+        Non-standard continuation of a comment line encountered in APT file.
+        NUMERR(1640007) OCCURS(3) PAGE(1) OUTIL(5)
+
+
+FIN SEGMENT # 1, 2.0 Kb
+
+CAM-POST GENER Traitement termine avec avertissement
+
+Temps utilise = 0.028 minutes.
+

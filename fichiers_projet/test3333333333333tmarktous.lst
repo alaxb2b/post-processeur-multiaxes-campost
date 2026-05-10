@@ -1,0 +1,149 @@
+Corporation des Technologies ICAM
+(c) Copyright 2022
+
+CAM-POST GENER Version 24.0-2235 Build 30735 win64
+ICAM_LIB:     C:\PROGRA~1\ICAMV2~1
+ICAM_APPDATA: C:\PROGRA~1\ICAMV2~1
+
+SOURCE:       C:\Users\AU91520\OneDrive - ETS\SYS856\Nouveau dossier\test3333333333333tmarktous.txt
+SORTIE:       C:\Users\AU91520\OneDrive - ETS\SYS856\Nouveau dossier\test3333333333333tmarktous.tap
+POST:         ZERA2025.240;1, Creer 27-Oct-2024 22:31:31.72
+DATABASE:     C:\Users\AU91520\AppData\Local\Temp\icam_tmpdb_2.dbf
+*** Erreur lors de l'ouverture du fichier words specifié ***
+DEF:          C:\PROGRA~1\ICAMV2~1\ICAM.DEF
+*** Erreur lors de l'ouverture du fichier DEF specifié ***
+KIT:          Aucun kit d'interface selectionné
+WORDS:
+
+LICENCE:      p5
+
+PID:
+
+AVIS:
+Ce produit est en cours d'exécution avec une licence limitée dans le temps,
+valable jusqu'au 14-dec-2025. Contactez la Corporation des Technologies ICAM
+pour obtenir des informations supplémentaires concernant votre contrat de
+licence. Vous pouvez nous joindre par téléphone au 1(514)697-8033.
+
+Corp. des Technologies ICAM     Z E R A 2 0 2 5              27-Oct-24  22:31:43
+(c) Copyright 2022                                                        Page 1
+                           XYZ Mill/FANUC MODEL 16 M
+
+                                     3AXES
+
+CODE NC
+--------------------------------------------------------------------------------
+Message:PPFUN: AUCUN INDEX TROUVE, LE DEFAUT O2638
+        SEVERITE(01) INS(0) ENRCL(0) OUTIL(0)
+
+O2638
+(Alaeeddine ZERROUQ)
+N1 G20 G40 G49 G50 G64 G69
+N2 G80 G90 M79 M69
+N3 G91 G28 G00 Z0.
+N4 X0. Y0.
+N5 T0
+N6 T0 M6
+N7 T9
+
+TEMPS SECTION 00:00:16  RAPIDE 00:00:16  AVANCE 00:00:00  DIVERS 00:00:00
+
+N8 T9 M6
+N9 T11
+N10 S2000 M3
+N11 G328 X5. Y6. Z1. A8. I3. J4. K5. R2. C7. D9 E9. U10 V11. Q6. F12.
+(Veuillez mesurer votre cavite SVP)
+N12 M0
+N13 G91 G28 G00 Z0. M5
+N14 X0. Y0.
+
+TEMPS SECTION 00:00:24  RAPIDE 00:00:19  AVANCE 00:00:05  DIVERS 00:00:00
+
+N15 T11 M6
+N16 T0
+N17 S12000 M3
+N18 G91 G28 G00 Z0. M5 M5
+N19 X0. Y0.
+
+TEMPS SECTION 00:00:20  RAPIDE 00:00:19  AVANCE 00:00:01  DIVERS 00:00:00
+
+N20 T0 M6
+N21 M30
+(fin de programme)
+
+TEMPS SECTION 00:00:00  RAPIDE 00:00:00  AVANCE 00:00:00  DIVERS 00:00:00
+
+
+
+
+
+
+
+
+
+
+
+--------------------------------------------------------------------------------
+Segment: 1                       Taille: 0.4 Kb                  Temps: 00:01:00
+Corp. des Technologies ICAM     Z E R A 2 0 2 5              27-Oct-24  22:31:43
+(c) Copyright 2022                                                        Page 2
+                                     3AXES
+
+SOMMAIRE OUTILLAGE:
+
+    POCHE #  OUTIL # DIAMETRE LONGUEUR  ATTACHE  COMP-LG COMP-DIA
+
+          9       ND       ND   0.0000       ND        0      NON
+         11       ND       ND   0.0000       ND        0      NON
+
+    POCHE #  AV-MINI  AV-MAXI     TRAV    RAPID   DIVERS    TOTAL
+
+          9   100.00   100.00 00:00:05 00:00:19 00:00:00 00:00:24
+         11   100.00   100.00 00:00:01 00:00:19 00:00:00 00:00:20
+
+
+SOMMAIRE PARCOURS OUTIL:
+
+     AXES         MINIMUM       MAXIMUM         TOTAL         ACCUM
+
+     X            -0.5462       28.0000       28.5462      146.9389
+     Y            -3.3315       54.0000       57.3315      285.6945
+     Z             0.0000       14.0000       14.0000       71.1594
+     A'            0.000         0.000         0.000         0.000
+     B'            0.000         0.000         0.000         0.000
+
+
+SOMMAIRE TEMPS D'USINAGE:
+
+     TYPE        HH:MM:SS   POURCENTAGE
+
+     RAPIDE      00:00:54        90.987
+     AVANCE      00:00:05         9.013
+     DIVERS      00:00:00         0.000
+
+     TOTAL       00:01:00
+
+
+SOMMAIRE DIAGNOSTIQUE:
+
+     TYPE           TOTAL
+
+     MESSAGE            1
+     AVERTIS            0
+     ERREUR             0
+     FATALE             0
+
+     TOTAL              1
+
+     MESSAGES
+
+        PPFUN: AUCUN INDEX TROUVE, LE DEFAUT O2638
+        NUMERR(0) OCCURS(1) PAGE(1) OUTIL(0)
+
+
+FIN SEGMENT # 1, 0.4 Kb
+
+CAM-POST GENER Traitement termine avec succes
+
+Temps utilise = 0.021 minutes.
+
