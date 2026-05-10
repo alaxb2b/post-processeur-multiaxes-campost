@@ -3,6 +3,8 @@
 **Cours :** SYS856 – Fabrication Assistée par Ordinateur (FAO)  
 **Institution :** École de Technologie Supérieure (ÉTS Montréal)  
 **Session :** Automne 2024  
+**Niveau :** Maîtrise
+**Résultat obtenu :** 96/100
 **Auteur :** Alae Zerrouq
 
 ---
