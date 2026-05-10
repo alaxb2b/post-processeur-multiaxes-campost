@@ -1,0 +1,1510 @@
+ICAM Technologies           QUEST Version 24.0-2235           27-Oct-2024 22:37
+(c) Copyright 2022                                                       Page 1
+                                   ZERA2025
+
+                             Description Générale
+
+
+Commentaires:
+
+        Aucun commentaire n'est défini.
+
+
+Information Générale:
+
+  1.00  Nom du post-processeur: ...................................... ZERA2025
+  2.00  Numéro d'identification du PP: [ND,# >= 1 & <= 999999] ............. ND
+  3.00  Type de Machine: [Contour,Edm,Poinçon,Tour,Tour-Fraiseur,Fraise,Robot,C
+        ................................................................ Fraise
+  4.00  Défauts Machine: [ND,Nom_fichier,Disque] ..................... vmc3.mil
+  5.00  Défaut Contrôleur: [ND,Nom_fichier,Disque] ............... fanuc16m.ctl
+  6.00  Nom du model associé: .............................................. ND
+  6.50  Moteur cinématique VM: [# >= 0] ..................................... 1
+ 40.00  Axe Z disponible: [Oui,Non] ....................................... Oui
+ 41.00  Axes linéaires secondaires disponibles: [Oui,Non] ................. Non
+ 42.00  Table rotative disponible: [Oui,Non] .............................. Oui
+ 42.10  Axe de la Table rotative la plus basse: [A',B',C'] ................. B'
+ 42.20  Axe de la Table rotative suivante: [A',C',ND] ...................... A'
+ 42.30  Axe de la table la plus haute: [C',ND] ............................. ND
+ 43.00  Tête rotative disponible: [Oui,Non] ............................... Non
+ 44.00  Tête oblique disponible: [Non,Simple,Double] ...................... Non
+ 60.00  Fabriquant de la Machine: .................................. VMC 3-Axis
+ 61.00  Modèle de la Machine: ........................................ XYZ Mill
+ 62.00  Fabriquant du contrôleur: .................................. FANUC LTD.
+ 63.00  Modèle du contrôleur: ................................ FANUC MODEL 16 M
+ 64.00  Nom de l'auteur du post-processeur: .................... Pas de réponse
+ 70.00  Système d'unité principal: [IN,FT,CM,MM,# > 0.] .................... IN
+ 71.00  Système d'unité secondaire: [ND,FT,CM,MM,# > 0.] ................... ND
+ 72.00  Code unité principale: [ND,G0-999.9,M0-999.9,ALT] .................. ND
+ 73.00  Mode de positionnement: [Absolu,Relatif,LesDeux] .............. LesDeux
+ 74.00  Changement mode de positionnement: [Codes,Registre] ............. Codes
+ 74.10  Code programmation absolue: [G0-999.9,M0-999.9,ALT] ............... G90
+ 74.20  Code programmation relative: [G0-999.9,M0-999.9,ALT] .............. G91
+ 75.00  Mode de positionnement préféré: [Absolue,Relatif] ............. Absolue
+ 75.10  Positionnement par défaut: [Absolue,Relatif,Aucun] .............. Aucun
+
+
+Format du Fichier de Vérification:
+
+  1.00  Titre du Listing PP: ........................ XYZ Mill/FANUC MODEL 16 M
+  2.00  Numéro de Version: [ND,# >= 0.01 & <= 9999999.99] .................. ND
+  3.00  Affichage des colonnes modal: [Oui,Non] ........................... Oui
+  4.01  Afficher l'axe X: [Oui,Non] ....................................... Non
+  4.02  Afficher l'axe Y: [Oui,Non] ....................................... Non
+  4.03  Afficher l'axe Z: [Oui,Non] ....................................... Non
+  4.07  Afficher l'axe A': [Oui,Non,Abs,Signe] ............................ Non
+  4.08  Afficher l'axe B': [Oui,Non,Abs,Signe] ............................ Non
+  4.19  Afficher la vitesse de broche: [Oui,Non,Signe] .................... Non
+  4.20  Afficher la vitesse d'avance: [Oui,Non] ........................... Non
+  4.21  Afficher temps écoulé: [Non,Abs,Delta] ............................ Non
+  4.24  Afficher colonne utilisateur numéro 24: [Non,Texte,0-8] ........... Non
+ICAM Technologies           QUEST Version 24.0-2235           27-Oct-2024 22:37
+(c) Copyright 2022                                                       Page 2
+                                   ZERA2025
+
+  4.25  Afficher colonne utilisateur numéro 25: [Non,Texte,0-8] ........... Non
+  4.26  Afficher colonne utilisateur numéro 26: [Non,Texte,0-8] ........... Non
+  4.27  Afficher colonne utilisateur numéro 27: [Non,Texte,0-8] ........... Non
+  4.28  Afficher colonne utilisateur numéro 28: [Non,Texte,0-8] ........... Non
+  4.29  Afficher numéro enrg. CL: [Oui,Non] ............................... Non
+  4.30  Afficher numéro d'instruction APT: [Oui,Non] ...................... Non
+  6.00  Largeur des colonnes personnalisée: [Oui,Non] ..................... Non
+  7.00  Largeur de la page: [# >= 25 & <= 256] ............................. 80
+  8.00  Entête des colonnes personnalisée: [Oui,Non] ...................... Non
+  9.10  Sommaire de section: [Oui,Non] .................................... Oui
+  9.20  Sommaire Page: [Oui,Non] .......................................... Oui
+  9.30  Sommaire outillage: [Oui,Non] ..................................... Oui
+  9.40  Sommaire des trajectoires: [Oui,Non] .............................. Oui
+  9.50  Sommaire des temps: [Oui,Non] ..................................... Oui
+  9.60  Sommaire des diagnostics: [Non,Base,Detaille,Complet] ......... Complet
+ 10.00  Fichier Ruban tabulé: [Oui,Non] ................................... Non
+
+
+Assignements des Codes G/M:
+
+  1.00  Registre des codes (G): ........................................  4) G2
+  2.00  Nombre maximum de code (G) sur un bloc: [ND,1-9] .................... 9
+  3.00  Registre des codes (M): ....................................... 33) Ms3
+  4.00  Nombre maximum de code (M) sur un bloc: [ND,1-9] .................... 2
+
+
+Format du Fichier CN:
+
+  1.00  Méthode de transmission du programme: [Ruban,DNC] ................. DNC
+  1.10  Temps minimum du traitement du bloc CN: [ND,# > 0.] ................ ND
+  2.20  Code fin de bloc: [ND, caractère ou valeur ASCII] .................. ND
+  2.30  Code de rembobinage: [ND, caractère ou valeur ASCII] ............... ND
+  2.40  Code point décimal: [caractère ou valeur ASCII] ..................... .
+  2.50  Code espace: [ND, caractère ou valeur ASCII] ....................... 32
+  2.60  Code début de commentaire: [ND, caractère ou valeur ASCII] ......... ND
+  3.50  Ajustement longueur du ruban: [# >= 0] .............................. 1
+  6.00  Identification programme requis: [Oui,Non] ........................ Non
+  7.10  Longueur maximum du bloc CN: [# >= 32 & <= 256] ................... 256
+  7.20  Niveau de sévérité pour arrêt de génération ruban: [ND,4-16] ....... ND
+  8.00  Casse des caractères du programme: [Mixed,Upper,Lower] .......... Mixed
+  9.10  Extension du fichier ruban CN: ......................... Pas de réponse
+ 11.00  Affichage écran disponible: [Oui,Non] ............................. Oui
+ 12.10  Message tronqué: [Oui,Non] ........................................ Non
+ 13.00  Nombre maximum de messages: [# >= 1] ................................ 1
+ 14.00  STOP après message: [ND,OPSTOP,STOP] ............................... ND
+ 14.10  Temporisation après message: [Oui,Non] ............................ Non
+ 15.00  Bloc optionnel: [Oui,Non] ......................................... Non
+ 15.10  Numéro de bloc nécessaire: [Oui,Non] .............................. Non
+ 16.00  Début du message: ................................................... (
+ 17.00  Fin du message: ..................................................... )
+ 18.00  Longueur maximale du message: [# >= 1 & <= 254] .................... 80
+ 19.00  Espaces autorise dans les messages operateur: [Oui,Non] ........... Oui
+ICAM Technologies           QUEST Version 24.0-2235           27-Oct-2024 22:37
+(c) Copyright 2022                                                       Page 3
+                                   ZERA2025
+
+                           Description de la Machine
+
+
+Axes Linéaires:
+
+101.00  Registre axe X: ............................................  6) Xs3.4s
+104.00  Convention de signe axe X: [Inverse,Normal] .................... Normal
+105.00  Vérification limites machine axe X: [Non,Borne,Total] ............. Non
+109.00  Avance maximum en X: [# > 0.] .................................... 200.
+110.00  Avance Rapide en X: [# >= 200.] .................................. 200.
+201.00  Registre axe Y: ............................................  7) Ys3.4s
+204.00  Convention de signe axe Y: [Inverse,Normal] .................... Normal
+205.00  Vérification limites machine axe Y: [Non,Borne,Total] ............. Non
+209.00  Avance maximum en Y: [# > 0.] .................................... 200.
+210.00  Avance Rapide en Y: [# >= 200.] .................................. 200.
+301.00  Registre axe Z: ............................................  8) Zs3.4s
+304.00  Convention de signe axe Z: [Inverse,Normal] .................... Normal
+305.00  Vérification limites machine axe Z: [Non,Borne,Total] ............. Non
+309.00  Avance maximum en Z: [# > 0.] .................................... 200.
+310.00  Avance Rapide en Z: [# >= 200.] .................................. 200.
+400.00  Mouvement lineaire minimum: [ND,# >= 0.0001] ....................... ND
+410.00  Axes lineaires modals: [Oui,Non] .................................. Oui
+
+
+Axes Rotatifs:
+
+100.00  Control axe A': [Continu,Position,Index] ...................... Continu
+101.00  Registre Axe_A': ........................................... 10) As4.3s
+103.00  Système d'unité axe rotatif: [Degres,# > 0.] ................... Degres
+104.00  Valeur décalage axe rotatif: [#] ................................... 0.
+105.00  Sortie Maximum par rapport à 360: [Moins,Egal,Plus] ............. Moins
+106.00  Contrôle direction de rotation: [ND,G,M] ........................... ND
+110.00  Méthode de positionnement: [Absolue,Relative,LesDeux] ......... LesDeux
+111.00  Spécification de positionnement: [Complet,Moitie] ............. Complet
+120.00  Mouvement rapide combine: [Oui,Non] ............................... Oui
+120.10  Positionnement en rapide contrôlable: [Oui,Non] ................... Non
+122.00  Degrés Par Minute (DPM) contrôlable: [Oui,Non] .................... Non
+122.50  Déplacement rotatif inclus dans les calculs de vitesse: [Oui,Non] . Oui
+125.00  Convention de signe axe_A'  : [Inverse,Normal] ................. Normal
+125.10  Orientation axe A': [Normale,Speciale] ....................... Speciale
+125.20  Composante en X du vecteur de l'axe de rotation: [#] ............... 0.
+125.30  Composante en Y du vecteur de l'axe de rotation: [#] ............... 0.
+125.40  Composante en Z du vecteur de l'axe de rotation: [#] ............... 1.
+126.00  Vérification limites machine axe_A': [Non,Borne,Total] ............ Non
+127.10  Minimum degrés par minute: [ND,# > 0.] ............................. ND
+127.20  Maximum degrés par minute: [# > 0.] ............................. 3996.
+127.30  Déplacement en rapide: [# >= 3996.] ............................. 3996.
+128.00  Mouvement rotatif minimum: [ND,# >= 0.001] ......................... ND
+129.00  Position en X du centre de l'axe_A'  : [#] ......................... 0.
+129.10  Position en Y du centre de l'axe_A'  : [#] ......................... 0.
+129.20  Position en Z du centre de l'axe_A'  : [#] ......................... 0.
+200.00  Control axe B': [Continu,Position,Index] ...................... Continu
+201.00  Registre Axe_B': ........................................... 12) Bs4.3s
+203.00  Système d'unité axe rotatif: [Degres,# > 0.] ................... Degres
+204.00  Valeur décalage axe rotatif: [#] ................................... 0.
+205.00  Sortie Maximum par rapport à 360: [Moins,Egal,Plus] ............. Moins
+ICAM Technologies           QUEST Version 24.0-2235           27-Oct-2024 22:37
+(c) Copyright 2022                                                       Page 4
+                                   ZERA2025
+
+206.00  Contrôle direction de rotation: [ND,G,M] ........................... ND
+210.00  Méthode de positionnement: [Absolue,Relative,LesDeux] ......... LesDeux
+211.00  Spécification de positionnement: [Complet,Moitie] ............. Complet
+220.00  Mouvement rapide combine: [Oui,Non] ............................... Oui
+220.10  Positionnement en rapide contrôlable: [Oui,Non] ................... Non
+222.00  Degrés Par Minute (DPM) contrôlable: [Oui,Non] .................... Non
+222.50  Déplacement rotatif inclus dans les calculs de vitesse: [Oui,Non] . Oui
+225.00  Convention de signe axe_B'  : [Inverse,Normal] ................. Normal
+225.10  Orientation axe B': [Normale,Speciale] ....................... Speciale
+225.20  Composante en X du vecteur de l'axe de rotation: [#] ............... 0.
+225.30  Composante en Y du vecteur de l'axe de rotation: [#] .............. -1.
+225.40  Composante en Z du vecteur de l'axe de rotation: [#] ............... 0.
+226.00  Vérification limites machine axe_B': [Non,Borne,Total] .......... Borne
+226.30  Limite maximum de l'axe_B'  : [#] .................................. 0.
+226.40  Limite minimum de l'axe_B'  : [# <= 0.] ......................... -105.
+227.10  Minimum degrés par minute: [ND,# > 0.] ............................. ND
+227.20  Maximum degrés par minute: [# > 0.] ............................. 1980.
+227.30  Déplacement en rapide: [# >= 1980.] ............................. 1980.
+228.00  Mouvement rotatif minimum: [ND,# >= 0.001] ......................... ND
+229.00  Position en X du centre de l'axe_B'  : [#] ..................... 2.3596
+229.10  Position en Y du centre de l'axe_B'  : [#] ......................... 0.
+229.20  Position en Z du centre de l'axe_B'  : [#] .................... -4.1459
+850.00  Axe rotatif modal: [Oui,Non] ...................................... Oui
+860.00  Orientation du repère de la face de la broche: [Normale,Speciale] .....
+        ............................................................... Normale
+
+
+Position de Référence (HOMEPT):
+
+  1.00  Type de position origine: [Non,Fixe,Reference] .............. Reference
+  2.00  Type de référence retour: [Workpiece,Machine] ............... Workpiece
+  3.00  Code G de retour référence: [ND,0-999.9,ALT] ....................... 28
+  3.10  Retour du point de reference: [ND,0-999.9,ALT] ..................... ND
+  6.10  Position de départ de l'axe X: [Min,Max,Inconnu,#] ............ Inconnu
+  6.20  Position de départ de l'axe Y: [Min,Max,Inconnu,#] ............ Inconnu
+  6.30  Position de départ de l'axe Z: [Min,Max,Inconnu,#] ................ Max
+  6.80  Position de départ de l'axe A': [Min,Max,Inconnu,#] ................ 0.
+  6.90  Position de départ de l'axe B': [Min,Max,Inconnu,#] ................ 0.
+ 10.00  Nombre de mvmt pour GOHOME: [0-4] ................................... 1
+ 10.10  Bloc CN pour le GOHOME de l'axe X: [0-1] ............................ 1
+ 10.20  Bloc CN pour le GOHOME de l'axe Y: [0-1] ............................ 1
+ 10.30  Bloc CN pour le GOHOME de l'axe Z: [0-1] ............................ 1
+ 10.80  Bloc CN pour le GOHOME de l'axe A': [0-1] ........................... 0
+ 10.90  Bloc CN pour le GOHOME de l'axe B': [0-1] ........................... 0
+ 13.00  Type d'arret apres GOHOME: [Aucun,OPSTOP,STOP] .................. Aucun
+ 14.00  Traitement du FROM: [Ignore,From,Goto] ......................... Ignore
+ 15.00  Utilise une position de depart par defaut: [Oui,Non] .............. Oui
+
+
+Changement Outil:
+
+  1.00  Arrêt de l'arrosage au changement outil: [Non,Oui,Automatique] .... Non
+  2.00  Arrêt de la broche au changement outil: [Non,Oui,Automatique] ..... Non
+  3.00  SPINDL/ORIENT généré par le post-processeur: [Non,# >= 0. & <= 360.] ..
+        ................................................................... Non
+  4.00  CUTCOM/OFF généré par le post-processeur: [Oui,Non] ............... Non
+ICAM Technologies           QUEST Version 24.0-2235           27-Oct-2024 22:37
+(c) Copyright 2022                                                       Page 5
+                                   ZERA2025
+
+  5.00  Position changement outil: [Non,Origine,Special,LesDeux] ...... Origine
+  5.10  Changement outil inclut mouvements automatiques: [Oui,Non] ........ Non
+  5.20  Bloc de chgt outil sur même bloc que mvt chgt out.: [Oui,Non] ..... Non
+ 15.00  Avez-vous un changeur d'outil (ATC): [Oui,Non] .................... Oui
+ 20.00  Format du registre d'outil: [Outil,LesDeux] ..................... Outil
+ 21.00  Registre de l'outil: .......................................... 30) Ts2
+ 25.00  Registre outil contient: [Poche,Identification] ................. Poche
+ 28.00  Numéro d'outil dans le registre: [Aucun,Actuel,Prec,Suiv] ...... Actuel
+ 29.00  Code M chargement d'outil: [ND,0-999.9,ALT] ......................... 6
+ 30.00  Registre d'outil T pour chgt manuel d'outil: [Non,Oui,Dummy,Special] ..
+        ................................................................. Dummy
+ 31.00  Code M chargement manuel d'outil: [ND,0-999.9,ALT] ................. ND
+ 32.00  STOP après chgt d'outil manuel: [Oui,Non] ......................... Non
+ 40.00  Registre outil pour sélectionner l'outil: [Oui,Non] ............... Non
+ 60.00  Code spécial pour déchargement l'outil: [Oui,Non] ................. Non
+ 80.00  Contrôle dispositif serrage outil: [ND,G,M] ........................ ND
+ 90.00  Rotation du changeur d'outil contrôlable: [Oui,Non] ............... Non
+100.00  Nombre total d'outils: [1-99] ...................................... 99
+101.00  Numéro d'outil spécial (Dummy): [0-99] .............................. 0
+104.00  Temps moyen de chgt d'outil: [# >= 0.] ............................. 0.
+105.00  Code M d'activation du changeur d'outil: [ND,0-999.9,ALT] .......... ND
+106.00  Défaut pour ADJUST: [Immediatement,Suivant,Meme] ................. Meme
+107.00  Répéter les erreurs de courses au début de chaque opération: [Oui,Non]
+        ................................................................... Non
+200.00  Têtes Porte outil (holders) disponibles: [Oui,Non] ................ Non
+
+
+Vitesse d'avance:
+
+  1.00  Avance contrôlable: [Oui,Non] ..................................... Oui
+  2.00  Avance uPM par défaut si omis dans fichier CL [Aucun,# >= 0.] ... Aucun
+ 20.00  Méthode code d'avance: [Directe,Table] ........................ Directe
+ 21.00  Gamme d'avance disponible: [Oui,Non] .............................. Non
+ 30.00  uPM disponible: [Oui,Non] ......................................... Oui
+ 31.00  Code G pour uPM: [ND,0-999.9,ALT] .................................. 94
+ 32.00  Registre pour uPM: ......................................... 27) Fs3.1s
+ 34.30  Maximum uPM: [# >= 0.1 & <= 999.9] .............................. 999.9
+ 50.00  uPR disponible: [Oui,Non] ......................................... Oui
+ 51.00  Code G pour uPR: [0-999.9,ALT] ..................................... 95
+ 52.00  Registre pour uPR: ......................................... 27) Fs3.1s
+ 54.30  Maximum uPR: [# >= 0.1 & <= 999.9] .............................. 999.9
+ 70.00  1/T disponible: [Oui,Non] ......................................... Oui
+ 70.10  Unité 1/T: [Minutes,Secondes] ................................. Minutes
+ 71.00  Code G pour 1/T: [0-999.9,ALT] ..................................... 93
+ 72.00  Registre pour 1/T: .......................................... 28) Fs5.3
+ 74.30  Maximum 1/T: [# >= 0.001 & <= 99999.999] .................... 99999.999
+ 79.00  Avance en 1/T sur un bloc sans mouvement: [Aucun,# >= 0.] ....... Aucun
+ 79.10  Valeur d'inverse temps sur un mouvement rapide: [Aucune,Actuel,# >= 0.]
+        ................................................................ Aucune
+ 79.20  Activer automatiquement le mode 1/T: [Oui,Non] .................... Oui
+ 80.00  Code G de limitation de vitesse d'avance: [ND,0-999.9,ALT] ......... ND
+ 85.00  Code d'avance (F) obligatoire avec le code G de mode: [Non,Separe,Oui]
+        ................................................................... Non
+ 86.00  Registres d'avance modal: [Oui,Non] ............................... Oui
+ 87.00  Avance nécessaire après rapide: [Oui,Non] ......................... Non
+ICAM Technologies           QUEST Version 24.0-2235           27-Oct-2024 22:37
+(c) Copyright 2022                                                       Page 6
+                                   ZERA2025
+
+ 90.00  Ajustement de la vitesse en fonction des limitations machine: [Oui,NNon
+ 91.00  Longueur d'outil par défaut pour calculs vitesse en 5-axes: [# >= 0.] .
+        .................................................................... 1.
+
+
+Gestion de la broche:
+
+  1.00  Broche contrôlable: [Oui,Non] ..................................... Oui
+ 20.00  Code de vitesse de broche: [Non,Directe,Table,Calcule] ........ Directe
+ 23.00  Registre de vitesse de broche: ................................ 29) Ss5
+ 30.00  Broche contrôlable par code (M): [Oui,Non] ........................ Oui
+ 31.00  Code pour SPINDL/CLW: [ND,0-999.9,ALT] .............................. 3
+ 31.10  Code pour SPINDL/CLW avec arrosage intégré: [ND,0-999.9,ALT] ....... ND
+ 32.00  Code pour SPINDL/CCLW: [ND,0-999.9,ALT] ............................. 4
+ 32.90  Code de broche change la vitesse: [Oui,Non] ....................... Non
+ 33.00  Code pour SPINDL/OFF: [ND,0-999.9,ALT] .............................. 5
+ 33.90  Arrêt avant d'inverser la direction: [Oui,Non] .................... Non
+ 34.00  Code pour SPINDL/LOCK: [ND,0-999.9,ALT] ............................ ND
+ 35.00  Code pour SPINDL/NEUTRL: [ND,0-999.9,ALT] .......................... ND
+ 36.00  Code pour SPINDL/ORIENT: [ND,0-999.9,ALT] .......................... 19
+ 37.00  Registre angle d'orientation: ................................. 29) Ss5
+ 49.10  Force bloc avec la broche ON: [Non,Avant,Apres,LesDeux] ........... Non
+ 49.20  Force bloc avec la broche OFF: [Non,Avant,Apres,LesDeux] ........ Apres
+ 49.30  Force bloc avec les autres fonctions: [Non,Avant,Apres,LesDeux] . Apres
+ 50.00  Gamme de broche disponible: [Oui,Non] ............................. Non
+ 61.10  Résolution de la broche en TR/MN: [# > 0. & < 99999.] .............. 1.
+ 61.20  Minimum TR/MN: [# > 0. & < 99999.] ................................. 1.
+ 61.30  Maximum TR/MN: [# > 1. & <= 99999.] ............................ 99999.
+ICAM Technologies           QUEST Version 24.0-2235           27-Oct-2024 22:37
+(c) Copyright 2022                                                       Page 7
+                                   ZERA2025
+
+                           Description du Contrôleur
+
+
+Système de Coordonnée:
+
+  1.00  Plans multiples supportés: [Oui,Non] .............................. Oui
+  2.00  Code G pour le plan XY: [0-999.9,ALT] .............................. 17
+  3.00  Code G pour le plan ZX: [0-999.9,ALT] .............................. 18
+  4.00  Code G pour le plan YZ: [0-999.9,ALT] .............................. 19
+  6.00  Plan par défaut: [ND,XY,ZX,YZ] ..................................... ND
+  7.00  Code de plan d'interpolation seul sur un bloc: [Oui,Non] .......... Oui
+ 10.00  Coordonnée locale - Translation disponible: [Oui,Non] ............. Non
+ 30.00  Coordonnée locale - Rotation disponible: [Oui,Non] ................ Non
+ 50.00  Coordonnée locale - Facteur d'échelle disponible: [Oui,Non] ....... Non
+ 70.00  Coordonnée locale - Miroir disponible: [Oui,Non] .................. Non
+
+
+Interpolation Linéaire:
+
+  2.00  Code G utilisé pour interpolation linéaire: [Oui,Non] ............. Oui
+ 30.00  Code G d'interpolation linéaire: [0-999.9,ALT] ...................... 1
+ 31.00  Code G modal: [Oui,Non] ........................................... Oui
+ 40.00  Axes positionnés tous en même temps: [Oui,Non] .................... Oui
+200.00  Code de fonction de saut disponible: [Oui,Non] .................... Non
+
+
+Déplacement en Rapide:
+
+ 10.00  Positionnement en rapide disponible: [Oui,Non] .................... Oui
+ 11.00  Code G nécessaire pour positionnement en rapide: [Oui,Non] ........ Oui
+ 12.00  Code G pour rapide: [0-999.9,ALT] ................................... 0
+ 13.00  Code G modal: [Oui,Non] ........................................... Oui
+ 14.00  Code d'avance nécessaire sur rapide: [Oui,Non] .................... Non
+ 19.00  Temps minimum de déplacement en rapide: [ND,# > 0.] ................ ND
+ 20.00  Axes rapide tous en même temps: [Oui,Non,Secur] ................... Oui
+ 50.00  Mvt. en Rapide maintient une ligne droite: [Oui,Non] .............. Non
+
+
+Interpolation Circulaire et Hélicoïdale:
+
+  1.00  Interpolation circulaire disponible: [Oui,Non] .................... Oui
+  2.10  Interpolation circulaire - Centre: [Oui,Non] ...................... Oui
+  2.20  Interpolation circulaire - Rayon: [Oui,Non] ....................... Oui
+  2.30  Interpolation hélicoïdale disponible: [Oui,Non] ................... Non
+  2.40  Interpolation circulaire - Trois Points: [Oui,Non] ................ Non
+  3.00  Centre et Rayon: [LesDeux,UnouAutre] .......................... LesDeux
+  4.40  Code G pour interpolation circulaire CLW: [0-999.9,ALT] ............. 3
+  4.50  Code G pour interpolation circulaire CCLW: [0-999.9,ALT] ............ 2
+  5.00  (G) codes modaux: [Oui,Non] ....................................... Oui
+  6.10  Plan multiple supporté pour l'interpolation circulaire: [Oui,Non] . Oui
+ 10.00  Centre cercle seul sur un bloc: [Oui,Non] ......................... Non
+ 11.00  Définition du centre: [Absolue,Relative,Actuel] .............. Relative
+ 11.10  Signe de l'offset: [VersCentre,Aucun,DepuisCentre] ......... VersCentre
+ 11.20  Sortie des valeurs zéro: [Oui,Non] ................................ Non
+ 12.00  Contrôleur utilise 2 registres de centre: [Oui,Non] ............... Non
+ 13.00  Registre centre en X: ...................................... 13) Is3.4s
+ICAM Technologies           QUEST Version 24.0-2235           27-Oct-2024 22:37
+(c) Copyright 2022                                                       Page 8
+                                   ZERA2025
+
+ 14.00  Registre centre en Y: ...................................... 14) Js3.4s
+ 15.00  Registre centre en Z: ...................................... 15) Ks3.4s
+ 20.00  Rayon cercle seul sur un bloc: [Oui,Non] .......................... Non
+ 21.10  Registre du Rayon: ......................................... 16) Rs3.4s
+ 51.00  Rayon Minimum: [# >= 0. & <= 999.9998] ............................. 0.
+ 52.00  Arc Maximum: [Quadrant,# >= 90. & <= 360.] ....................... 359.
+ 53.00  Longueur d'arc minimum: [# >= 0.] .................................. 0.
+
+
+Correction d'Outil et Décalage d'Origine:
+
+101.00  Compensation de longueur disponible: [Oui,Non] .................... Non
+201.00  Correction de rayon d'outil disponible: [Oui,Non] ................. Oui
+202.00  Méthode de compensation: [Vecteur,G,LesDeux] ........................ G
+203.00  Correction d'outil dans tous les plans: [Oui,Non] ................. Non
+211.00  Code G pour outil à gauche du profil: [0-999.9,ALT] ................ 41
+212.00  Code G pour outil à droite du profil: [0-999.9,ALT] ................ 42
+213.00  Code G d'annulation correction d'outil: [0-999.9,ALT] .............. 40
+217.00  Compensation de rayon seul sur un bloc: [Oui,Non] ................. Non
+218.00  Forcer code (G) d'avance lors d'un code LEFT/RIGHT/OFF: [Oui,Non] . Oui
+221.00  Numéro de correcteur disponible: [Oui,Non] ........................ Oui
+222.00  Registre du correcteur: ....................................... 20) Ds2
+223.00  Nombre de valeurs disponibles: [1-99] .............................. 99
+223.50  Utiliser No. d'outil comme valeur par défaut: [Oui,Non] ........... Oui
+224.00  Valeur d'annulation de correction: [ND,0-99] ....................... ND
+251.00  Compensation de rayon d'outil sur un mvt rapide: [Oui,Non] ........ Oui
+252.00  Compensation de rayon activée avec interpolation circulaire: [Oui,Non]
+        ................................................................... Non
+261.00  Comportement aux angles sortants: [Lineaire,Circular,LesDeux,Angle] ...
+        .............................................................. Lineaire
+265.00  Mouvement au démarrage et à l'annulation: [TypeA,TypeB] ......... TypeB
+271.00  Correction d'outils 3D disponible: [Oui,Non] ...................... Non
+301.00  Décalage d'origine disponible: [Oui,Non] .......................... Oui
+302.00  Méthode de décalage: [XYZ,Ajuste] .............................. Ajuste
+303.00  Méthode de contrôle: [G,M,Offset] ................................... G
+321.00  Plus haut code de la série de systèmes de coord: [# >= 0 & <= 999] . 59
+322.00  Plus petit code de la série de systèmes de coord: [0-59] ........... 54
+323.00  Code retour origine absolue: [ND,0-999.9,ALT] ...................... 53
+324.00  Système de coordonnées par défaut: [Non,Off,54-59] ................. 54
+325.00  Défaut pour ADJUST: [Immediatement,Suivant] ............. Immediatement
+350.00  Forcer un nouveau bloc: [Non,Avant,Apres,LesDeux] ............. LesDeux
+360.00  Décalage continue avec table rotative: [Non,Oui,RTCP] ............. Non
+370.00  Rotary table dynamic fixture compensation: [Oui,Non] .............. Non
+
+
+Usinage 5D Avancé:
+
+  1.00  Tolérance LINTOL par défaut pour déplacement en vitesse: [ND,# >= 0.000
+        ................................................................. 0.002
+  2.00  Tolérance LINTOL par défaut pour déplacement rapide: [ND,# >= 0.0002] .
+        .................................................................... ND
+  5.00  Path planning activé au démarrage: [Oui,Non] ...................... Non
+ 10.00  RTA activé au démarrage: [Oui,Non] ................................ Non
+100.00  RTCP disponible: [Oui,Non] ........................................ Non
+200.00  Transformation Cartésienne à Polaire disponible: [Oui,Non] ........ Non
+ICAM Technologies           QUEST Version 24.0-2235           27-Oct-2024 22:37
+(c) Copyright 2022                                                       Page 9
+                                   ZERA2025
+
+Interpolation Splinaire:
+
+  1.00  Interpolation Spline supportée: [Oui,Non] ......................... Non
+
+
+Usinage Haute-Vitesse:
+
+1
+200.00  Usinage Grande Vitesse: [ND,Emuler,Supporter] ...................... ND
+ICAM Technologies           QUEST Version 24.0-2235           27-Oct-2024 22:37
+(c) Copyright 2022                                                      Page 10
+                                   ZERA2025
+
+                                 Cycles Fixes
+
+
+Information Générale sur les Cycles de perçage:
+
+  1.00  Cycles G81-G89 supportés: [Oui,Non,Macro] ......................... Oui
+  2.00  Code (G) pour annuler le cycle: [ND,0-999.9,ALT] ................... 80
+  2.10  Code d'annulation nécessaire entre les cycles: [Non,Oui,Toujours] . Non
+  2.20  Mouvement permis avec code d'annulation: [Non,Oui,Z] .............. Non
+  2.30  Effet des autres codes G: [ND,Temporaire,Annuler] .................. ND
+  3.00  Type de cycle machine: [Parametrique,Standard] ............... Standard
+  4.00  Code (G) de cycle modal: [Oui,Non] ................................ Oui
+  4.10  Cycles supportés dans tous les plans: [Non,Oui,Certains] .......... Non
+  4.60  Mouvement rotatif permis pendant le repositionnement des cycles: [Oui,N
+        ................................................................... Oui
+  5.00  Distance de sécurité par défaut: [# >= 0.] ........................ 0.1
+  6.10  Décomposition du mouvement de positionnement du cycle: [Oui,Non] .. Non
+  6.20  Positionnement du cycle par le contrôleur: [Non,Lineaire,Secur,XY-Z,Z-X
+        .............................................................. Lineaire
+  6.30  Décomposition du mouvement suivant CYCLE/OFF: [Oui,Non] ........... Non
+  7.00  Avez-vous un registre de distance de sécurité: [Oui,Non] .......... Oui
+ 10.00  Registre Plan-R: ............................................ 17) Rs2.1
+ 11.00  Registre Plan-R modal: [Oui,Non] .................................. Oui
+ 12.00  Auto-palpage Plan-R: [ND,# > 0.] ................................... ND
+ 14.00  Positionnement Plan-R: [Absolue,Relatif,Actuel] ................ Actuel
+ 14.10  Référence Plan-R en Relatif: [-Z,Normal,Z] ..................... Normal
+ 20.00  Dégagement Fin de Cycle: [Initial,R,Contrôlable,Plan] ..... Contrôlable
+ 20.10  Code G ou M retour INITIAL: [G0-999.9,M0-999.9,ALT] ............... G98
+ 20.20  Code G ou M retour PLAN-R: [G0-999.9,M0-999.9,ALT] ................ G99
+ 30.00  Registre spécial de profondeur: [Oui,Non] ......................... Non
+ 40.00  Positionnement en profondeur: [Absolue,Relatif,Actuel] ......... Actuel
+ 41.00  Référence profondeur en relatif: [-R,Normal,R] ................. Normal
+ 42.00  Registre de profondeur modal: [Oui,Non] ........................... Oui
+ 43.00  Axes de positionnement modaux: [Non,Oui,Premier] .................. Oui
+ 44.00  Axes rotatifs modaux: [Non,Oui,Premier] ........................... Oui
+ 50.00  Temporisation dans Cycle: [Manuel,Variable,Fixe] ............. Variable
+ 50.10  Temporisation en révolution disponible: [Non,Negatif,FeedMode] .... Non
+ 51.00  Registre de temporisation: ................................... 19) Ps23
+ 52.00  Registre de temporisation modal: [Oui,Non] ........................ Oui
+ 54.00  Temporisation par défaut en CYCLE: [# >= 0.001 & <= 99.999] ........ 1.
+ 54.10  Ignorer temporisation si non-disponible: [Oui,Non] ................ Oui
+ 55.00  Registres spéciaux d'avance pour cycle: [Non,LesDeux,uPM,uPR] ..... Non
+ 58.00  Registre spécial pour l'avance de taraudage: [Oui,Non] ............ Non
+
+
+Cycles de perçage:
+
+ 10.00  Code G pour cycle DRILL: [ND,Emuler,0-999.9,ALT] ................... 81
+ 11.00  Temporisation permise avec cycle DRILL: [Oui,Non] ................. Non
+ 20.00  Code G pour cycle FACE: [ND,Emuler,0-999.9,ALT] .................... 82
+ 30.00  Code G pour cycle TAP: [ND,Emuler,0-999.9,ALT] ..................... 84
+ 40.00  Code G pour cycle TAP inverse: [ND,Emuler,0-999.9,ALT] ............. 74
+ 41.10  Temporisation permise avec cycle TAP: [Oui,Non] ................... Non
+ 50.00  Code G pour cycle BORE: [ND,Emuler,0-999.9,ALT] .................... 86
+ 51.00  Temporisation permise avec cycle BORE: [Oui,Non] .................. Non
+ 60.00  Code G pour cycle BORE avec DWELL: [ND,Emuler,0-999.9,ALT] ......... 88
+ICAM Technologies           QUEST Version 24.0-2235           27-Oct-2024 22:37
+(c) Copyright 2022                                                      Page 11
+                                   ZERA2025
+
+ 70.00  Code G Cycle BORE avec ORIENT: [ND,Emuler,0-999.9,ALT] ............. 87
+ 71.00  Temporisation permise avec cycle BORE avec ORIENT: [Oui,Non] ...... Non
+ 72.00  Contrôle de l'indexage broche: [Manuel,Variable,Fixe] ............ Fixe
+ 75.00  Valeur fixe de l'angle d'indexage: [# >= 0. & < 360.] .............. 0.
+ 76.00  Contrôle amplitude dégagement: [Manuel,Variable,Fixe] ............ Fixe
+ 79.00  Valeur fixe de la distance de dégagement: [# > 0.] ............... 0.01
+ 80.00  Code G pour cycle REAM: [ND,Emuler,0-999.9,ALT] .................... 85
+ 81.00  Temporisation permise avec cycle REAM: [Oui,Non] .................. Non
+ 90.00  Code G pour cycle REAM avec DWELL: [ND,Emuler,0-999.9,ALT] ......... 89
+100.00  Code G pour cycle DEEP: [ND,Emuler,0-999.9,ALT] .................... 83
+101.10  Temporisation permise avec cycle DEEP: [Oui,Non] .................. Non
+102.00  Distance de sécurité secondaire dans DEEP: [# > 0.] .............. 0.05
+110.00  Code G pour cycle BRKCHP: [ND,Emuler,0-999.9,ALT] .................. 73
+111.10  Temporisation permise avec cycle BRKCHP: [Oui,Non] ................ Non
+112.00  Distance de dégagement secondaire en BRKCHP: [# >= 0.] ........... 0.05
+120.00  Contrôle valeur de pénétration: [Manuel,Variable,Fixe] ....... Variable
+121.00  Registre distance de pénétration: .......................... 26) Qs3.4s
+122.00  Nombre maximum de registre de distance: [1-9] ....................... 1
+123.00  Registre de distance de pénétration modal: [Oui,Non] .............. Oui
+125.00  Distance de pénétration par défaut: [# >= 0.0001 & <= 999.9999] .... 1.
+126.00  Pénétration décroissante disponible: [Oui,Non] .................... Non
+129.40  Pénétration minimum: [# >= 0.0001 & <= 999.9999] ................. 0.01
+130.00  Registre distance de rétraction disponible: [Oui,Non] ............. Non
+140.00  Code G pour cycle THRU: [ND,Emuler,0-999.9,ALT] .................... 71
+141.00  Temporisation permise avec cycle THRU: [Oui,Non] .................. Non
+142.00  Distance de sécurité secondaire dans THRU: [# >= 0.] .............. 0.1
+ICAM Technologies           QUEST Version 24.0-2235           27-Oct-2024 22:37
+(c) Copyright 2022                                                      Page 12
+                                   ZERA2025
+
+                             Mots Post-processeurs
+
+
+La commande AIR:
+
+  1.00  Unité d'air disponible: [Oui,Non] ................................. Non
+
+
+La commande BREAK:
+
+  1.00  Verification interruption programme desiree: [Oui,Non] ............ Oui
+  2.00  Taille programme minimum en Kb: [# >= 0.] .......................... 0.
+  3.00  Taille programme maximum en Kb: [# >= 0.001] ..................... 128.
+  4.00  Genere Identification programme sur le nouveau ruban: [Oui,Non] ... Non
+  5.00  L'interruption conditionel pour vitesse de coupe: [Oui,Non] ....... Oui
+  5.10  Retrait d'outil avant interruption en vitesse de coupe: [Oui,Non] . Oui
+
+
+La commande CALSUB:
+
+  1.00  Sous-programme CN supporte: [Oui,Non] ............................. Non
+  5.00  Traitement INDEX et COPY: [Non,Emuler] ......................... Emuler
+
+
+La commande CLAMP:
+
+  1.00  Blocage/Déblocage d'axe possible: [Oui,Non] ....................... Non
+
+
+La commande COOLNT:
+
+  1.00  Arrosage contrôlable: [Oui,Non] ................................... Oui
+  1.30  Arrosage avec le prochain mvt.: [Non,Oui,Apres,Plongee,Avance] .... Non
+  2.10  Code M pour arrosage FLOOD: [ND,0-999.9,ALT] ........................ 8
+  2.20  Code M pour arrosage MIST: [ND,0-999.9,ALT] ........................ 10
+  2.30  Code M pour arrosage TAPKUL: [ND,0-999.9,ALT] ...................... ND
+  2.40  Code M pour arrosage THRU: [ND,0-999.9,ALT] ........................ 50
+  2.50  Type d'arrosage #5: .................................... Pas de réponse
+  2.60  Type d'arrosage #6: .................................... Pas de réponse
+  2.70  Type d'arrosage #7: .................................... Pas de réponse
+  2.80  Type d'arrosage #8: .................................... Pas de réponse
+  2.90  Type d'arrosage #9: .................................... Pas de réponse
+  3.10  Code M pour COOLNT/OFF: [ND,0-999.9,ALT] ............................ 9
+  4.00  Défaut pour COOLNT/ON: [FLOOD,MIST,THRU] ........................ FLOOD
+  5.00  Durée temporisation: [# >= 0.] ..................................... 0.
+ 10.00  Dispositif d'arrosage auxiliaire: [Oui,Non] ....................... Non
+ 20.00  Contrôle de pression d'arrosage: [Oui,Non] ........................ Non
+
+
+La commande DELAY:
+
+  1.00  Commande de Temporisation disponible: [Oui,Non] ................... Oui
+  2.10  Temporisation en secondes disponible: [Oui,Non] ................... Oui
+  2.20  Temporisation en révolutions disponible: [Oui,Non] ................ Non
+ 10.00  Control temporisation (secondes): [ND,G0-999.9,M0-999.9,ALT] ....... G4
+ 11.00  Durée contrôlable: [Oui,Non] ...................................... Oui
+ICAM Technologies           QUEST Version 24.0-2235           27-Oct-2024 22:37
+(c) Copyright 2022                                                      Page 13
+                                   ZERA2025
+
+ 12.00  Registre pour la Tempo: ...................................... 19) Ps23
+ 17.00  Registre toujours présent: [Oui,Non] .............................. Oui
+
+
+La commande END:
+
+  1.00  Code (M) de fin de programme: [0-999.9,ALT] ......................... 2
+  2.00  Arrêt de la broche par le contrôleur: [Oui,Non] ................... Non
+  2.10  SPINDL/OFF avant END: [Oui,Non] ................................... Non
+  3.00  Arrosage arrêtée par le contrôleur: [Oui,Non] ..................... Non
+  3.10  COOLNT/OFF avant END: [Oui,Non] ................................... Non
+
+
+La commande INSERT:
+
+  1.00  Caractère OPSKIP nécessaire: [Oui,Non] ............................ Oui
+  2.00  Numéro de bloc requis: [Oui,Non] .................................. Oui
+  3.00  Fin de bloc inséré: [Oui,Non] ..................................... Non
+  4.00  Espace enlevé: [Oui,Non] .......................................... Non
+
+
+La commande LOCATE:
+
+  1.00  Décalage programme disponible: [Oui,Non] .......................... Non
+
+
+La commande MCHTOL:
+
+100.00  Codes de décélération pour arrêt précis: [ND,code_M,code_G] ........ ND
+
+
+La commande OPSKIP:
+
+  1.00  Saut de bloc optionnel disponible: [Oui,Non] ...................... Oui
+  2.00  Niveau multiple disponible: [Oui,Non] ............................. Non
+  3.00  Caractère(s) de Saut de blocs: ...................................... /
+
+
+La commande OPSTOP:
+
+  1.00  Arrêt facultatif disponible: [Oui,Non] ............................ Oui
+  2.00  Code M de l'arrêt facultatif: [0-999.9,ALT] ......................... 1
+  3.00  Broche arrêtée par le contrôleur: [Oui,Non] ....................... Non
+  3.10  SPINDL/OFF avant OPSTOP: [Oui,Non] ................................ Non
+  3.20  SPINDL/ON après OPSTOP: [Oui,Non] ................................. Non
+  4.00  Arrêt de l'arrosage par le contrôleur: [Oui,Non] .................. Non
+  4.10  COOLNT/OFF avant OPSTOP: [Oui,Non] ................................ Non
+  4.20  COOLNT/ON après OPSTOP: [Oui,Non] ................................. Non
+
+
+La commande PPRINT:
+
+  1.00  Traitement de la commande PPRINT: [PPRINT,DISPLY,TPRINT] ....... PPRINT
+ICAM Technologies           QUEST Version 24.0-2235           27-Oct-2024 22:37
+(c) Copyright 2022                                                      Page 14
+                                   ZERA2025
+
+La commande RAPID:
+
+  1.00  Commande RAPID modale: [Oui,Non] .................................. Oui
+
+
+La commande RETRCT:
+
+  1.00  Vitesse de Retraction: [Rapid,AvancePrec,Special] ............... Rapid
+
+
+La commande REWIND:
+
+  1.00  Code (M) pour rembobinage programme: [0-999.9,ALT] ................. 30
+  2.00  Broche arrêtée par le contrôleur: [Oui,Non] ....................... Non
+  2.10  SPINDL/OFF requis avant REWIND: [Oui,Non] ......................... Non
+  3.00  Arrosage arrêtée par le contrôleur: [Oui,Non] ..................... Non
+  3.10  COOLNT/OFF avant REWIND: [Oui,Non] ................................ Non
+
+
+La commande SEQNO:
+
+  1.00  Numero de sequence necessaire: [Non,Quelquefois,Toujours] .... Toujours
+  3.00  Registe de numero de Sequence: ................................  3) Ns5
+  5.00  Valeur Minimum: [# >= -99999. & <= 99999.] ......................... 1.
+  7.00  Methode de numero de sequence par defaut: [Regulier,Auto] .... Regulier
+  8.00  Numero de sequence demarrant sur premier bloc: [Oui,Non] .......... Oui
+  9.00  Numero de sequence initial: [# >= 1. & <= 99999.] .................. 1.
+ 10.00  Increment par defaut: [# >= 1.] .................................... 1.
+
+
+La commande STOP:
+
+  1.00  Code M pour arrêt programme: [0-999.9,ALT] .......................... 0
+  2.00  Broche arrêtée par le contrôleur: [Oui,Non] ....................... Non
+  2.10  SPINDL/OFF avant STOP: [Oui,Non] .................................. Non
+  2.20  SPINDL/ON après STOP: [Oui,Non] ................................... Non
+  3.00  Arrosage stoppe par le contrôleur: [Oui,Non] ...................... Non
+  3.10  COOLNT/OFF avant STOP: [Oui,Non] .................................. Non
+  3.20  COOLNT/ON après STOP: [Oui,Non] ................................... Non
+
+
+La commande TMARK:
+
+  1.00  Symbol marque ruban (TMARK): [ND,Sequence,Symbol_Rwd] ........ Sequence
+  2.00  Registre de marquage: [caractère ou valeur ASCII] ................... #
+  2.10  Défaut pour TMARK/ON: [Auto,Suivant] .......................... Suivant
+  5.00  Bloc de démarrage de sécurité: [Oui,Non] .......................... Oui
+
+
+La commande TRANS:
+
+  1.00  Valeur de TRANS cumulatives: [Oui,Non] ............................ Non
+ICAM Technologies           QUEST Version 24.0-2235           27-Oct-2024 22:37
+(c) Copyright 2022                                                      Page 15
+                                   ZERA2025
+
+                      Personnalisation du Post-processeur
+
+
+Procédures Avant/Après:
+
+ 10.00  Macro de déclaration: [Oui,Non] ................................... Non
+  1.10  Macro de début d'exécution PP: [Oui,Non] .......................... Oui
+    1: Macro utilisateur
+     | CLAMP/MANUAL,OFF,XAXIS,28,YAXIS,54,ZAXIS,14
+    2: Macro utilisateur
+     | $$Macro debut d'execution suivant INDEX
+     | DECLAR/LOCAL,REAL,NUMBLC
+     | NUMBLC=$FGET(INDEX,8,30)
+     | IF/NUMBLC.NE.0
+     |   TAPEWT
+     |   TAPEOP/DELETE,NUMBLC
+     | ELSE
+     |   PPFUN/3,1,'AUCUN INDEX TROUVE, LE DEFAUT O2638'
+     |   INDEX/2638
+     | ENDOF/IF
+     | SEARCH/1
+     | DECLAR/LOCAL,REAL,NUMBLW
+     | $$ On bloque la sortie de INDEX si il se trouve hors les lignes 8 et 30
+     | NUMBLW=$FGET(INDEX)
+     | IF/NUMBLW.NE.0
+     |   IF/NUMBLW.GT.30.OR.NUMBLW.LT.8
+     |     TAPEOP/DELETE,NUMBLW
+     |   ENDOF/IF
+     | ENDOF/IF
+    3: Macro utilisateur
+     | $$ Desactivation de G54 et G43 pour le sortir avec le premiver mvt plus tard
+     | PPFUN/9,54,-1
+     | PPFUN/9,43,-1
+    4: Macro utilisateur
+     | $$Affichage nom etudiant
+     | DISPLY/'Alaeeddine ZERROUQ'
+    5: Macro utilisateur
+     | $$ Parametrage classement des codes G et M
+     | PPFUN/16,20,40,49,50,64,69
+     | PPFUN/16,80,90
+     | PPFUN/-16,79,69
+     | PPFUN/16,91,28,0
+     | PPFUN/-16,78,68
+     | PPFUN/16,90,54,0
+     | PPFUN/16,94,41,1
+     | PPFUN/16,40,1
+     | PPFUN/16,17,3
+     | PPFUN/16,99,83
+     | PPFUN/-16,9,5
+    6: Macro utilisateur
+     | $$ Affichage 2 premires lignes tentative 2
+     | PPFUN/7,'G',20,'G',40,'G',49,'G',50,'G',64,'G',69,0
+     | PPFUN/7,'G',80,'G',90,'M',79,'M',69,0
+    7: Macro utilisateur
+     | $$ Desactivation de G90 pour le sortir avec le premiver mvt plus tard
+     | PPFUN/9,90,-1
+ICAM Technologies           QUEST Version 24.0-2235           27-Oct-2024 22:37
+(c) Copyright 2022                                                      Page 16
+                                   ZERA2025
+
+    8: Macro utilisateur
+     | $$ Declaration variables
+     | DECLAR/GLOBAL,LOGICAL,FCOOLNT
+     | DECLAR/GLOBAL,REAL,FPRBDEPTH,FPRBFEDRAT,FPROBE
+     | FCOOLNT=$FALSE
+     | FPROBE=0
+     | FPRBDEPTH=0
+     | FPRBFEDRAT=0
+  1.20  Macro de fin d'exécution PP: [Oui,Non] ............................ Oui
+    1: Macro utilisateur
+     | $$ $RAPID=$TRUE
+     | LOADTL/0
+     | AUXFUN/30
+     | DISPLY/'fin de programme'
+  2.10  Type de macro avant interruption ruban: [Machine,Oui,Non] ......... Non
+  2.20  Type de macro après interruption ruban: [Machine,Oui,Non] ......... Non
+  3.10  Macro avant chargement outil: [Oui,Non] ........................... Oui
+    1: Macro utilisateur
+     | $$ Retour origine en rapide
+     | $RAPID=$TRUE
+     | GOTO/0,0,0
+    2: Macro utilisateur
+     | $$ Desactivation G91
+     | PPFUN/9,91,-1
+    3: Macro utilisateur
+     | $$ Desactivation G0 G90 G28 X0 Y0 Z0 A0 B0
+     | PPFUN/9,28,-1
+     | PPFUN/9,0,-1
+     | PPFUN/9,90,-1
+     | PPFUN/8,'X',0,'Y',0,'Z',0,'A',0,'B',0
+  3.20  Macro après chargement outil: [Oui,Non] ........................... Oui
+    1: Macro utilisateur
+     | IF/$T.EQ.0.AND.$NT.EQ.0
+     |   PPFUN/7,0
+     | ELSE
+     |   PPFUN/7,'T',$NT,0
+     | ENDOF/IF
+    2: Macro utilisateur
+     | $$ Reactivation G91
+     | PPFUN/9,91,91
+    3: Macro utilisateur
+     | $$Reactivation de G0 G28 G90 X Y Z A B
+     | PPFUN/9,28,28
+     | PPFUN/9,0,0
+     | PPFUN/9,90,90
+     | PPFUN/8,'X','X','Y','Y','Z','Z'
+     | IF/$MULTAX.EQ.$TRUE
+     |   PPFUN/8,'A','A','B','B'
+     | ENDOF/IF
+  4.10  Macro avant premier chargement outil: [Oui,Non] ................... Oui
+    1: Macro utilisateur
+     | $$ Retour origine en rapide
+     | $RAPID=$TRUE
+     | GOTO/0,0,0
+    2: Macro utilisateur
+     | $$ Desactivation G91
+ICAM Technologies           QUEST Version 24.0-2235           27-Oct-2024 22:37
+(c) Copyright 2022                                                      Page 17
+                                   ZERA2025
+
+     | PPFUN/9,91,-1
+    3: Macro utilisateur
+     | $$Chargement dummy tool
+     | PPFUN/7,'T',0
+     | PPFUN/7,'T',0,'M',6,0
+     | PPFUN/7,'T',$P1,0
+    4: Macro utilisateur
+     | $$ Desactivation G0 G90 G28 X0 Y0 Z0 A0 B0
+     | PPFUN/9,28,-1
+     | PPFUN/9,0,-1
+     | PPFUN/9,90,-1
+     | PPFUN/8,'X',0,'Y',0,'Z',0,'A',0,'B',0
+  4.20  Macro après première chargement outil: [Oui,Non] .................. Oui
+    1: Macro utilisateur
+     | IF/$T.EQ.0.AND.$NT.EQ.0
+     |   PPFUN/7,0
+     | ELSEIF/$NT.EQ.$T
+     |   PPFUN/7,'T',0,0
+     | ELSE
+     |   PPFUN/7,'T',$NT,0
+     | ENDOF/IF
+    2: Macro utilisateur
+     | $$ Reactivation G91
+     | PPFUN/9,91,91
+    3: Macro utilisateur
+     | $$Reactivation de G0 G28 G90 X Y Z A B
+     | PPFUN/9,28,28
+     | PPFUN/9,0,0
+     | PPFUN/9,90,90
+     | PPFUN/8,'X','X','Y','Y','Z','Z'
+     | IF/$MULTAX.EQ.$TRUE
+     |   PPFUN/8,'A','A','B','B'
+     | ENDOF/IF
+  5.10  Macro avant Cycle: [Oui,Non] ...................................... Non
+  5.20  Macro après Cycle: [Oui,Non] ...................................... Non
+  6.10  Macro avant mouvement: [Oui,Non] .................................. Oui
+    1: Macro utilisateur
+     | $$ Desactivation registres si mvt rapide pour les sortir dans macro ap mvt hors cas retour a l origine ou premier mvt apres retour a l origine
+     | IF/$RAPID.EQ.$TRUE.AND.$ZM.NE.0.AND.$P03(3).NE.0.AND.FPROBE.NE.-1
+     |   IF/$MULTAX.EQ.$FALSE
+     |     IF/$P03(3).LT.$ZM
+     |       PPFUN/8,'Z',0
+     |       PPFUN/8,'A',0,'B',0
+     |       ZCLOSE=$TRUE
+     |     ELSEIF/$P03(3).GT.$ZM
+     |       PPFUN/8,'X',0,'Y',0
+     |       PPFUN/8,'A',0,'B',0
+     |       XCLOSE=$TRUE
+     |     ENDOF/IF
+     |   ELSE
+     |     IF/$P03(3).LT.$ZM
+     |       PPFUN/8,'X',0,'Y',0
+     |       PPFUN/8,'Z',0
+     |       ZCLOSE=$TRUE
+     |     ELSEIF/$P03(3).GT.$ZM
+     |       PPFUN/8,'X',0,'Y',0
+ICAM Technologies           QUEST Version 24.0-2235           27-Oct-2024 22:37
+(c) Copyright 2022                                                      Page 18
+                                   ZERA2025
+
+     |       PPFUN/8,'A',0,'B',0
+     |       ACLOSE=$TRUE
+     |     ENDOF/IF
+     |   ENDOF/IF
+     | ENDOF/IF
+    2: Macro utilisateur
+     | $$ cas si retour a Z0
+     | PPFUN/8,'G',0
+     | IF/$RAPID.EQ.$TRUE.AND.$P03(3).EQ.0.AND.FPROBE.NE.-1
+     |   IF/$P03(2).NE.0.OR.$P03(1).NE.0
+     |     CLAMP/MANUAL,OFF,XAXIS,28,YAXIS,54,ZAXIS,14 $$ Mise en mémoire de la position de l’outil avec retour à une position de référence
+     |     PPFUN/8,'G',0
+     |     PPFUN/16,91,28,0
+     |     PREFUN/91,28
+     |     PPFUN/8,'G','G'
+     |     PPFUN/7,'G',91,'G',28,SAME,'Z'
+     |     PPFUN/8,'X',0,'Y',0,'A',0,'B',0
+     |     PPFUN/7,0
+     |   ENDOF/IF
+     | ENDOF/IF
+     | PPFUN/8,'G','G'
+    3: Macro utilisateur
+     | $$ cas si retour a O
+     | PPFUN/8,'G',0
+     | IF/$RAPID.EQ.$TRUE.AND.$P03(3).EQ.0
+     |   IF/$P03(2).EQ.0.AND.$P03(1).EQ.0
+     |     CLAMP/MANUAL,OFF,XAXIS,28,YAXIS,54,ZAXIS,14 $$ Mise en mémoire de la position de l’outil avec retour à une position de référence
+     |     PPFUN/8,'G',0
+     |     PPFUN/8,'X',0,'Y',0,'A',0,'B',0,'Z',0
+     |     PPFUN/9,0,-1
+     |     PREFUN/91,28,0
+     |   ENDOF/IF
+     | ENDOF/IF
+     | PPFUN/8,'G','G'
+    4: Macro utilisateur
+     | $$ 1er mvt apres retour a Z0 ou a l origine (et reactivation de G54 et G43 vu que c est le premier mvt apres chgt d outil)
+     | IF/$ZM.EQ.0.AND.$P03(3).NE.0.AND.$RAPID.EQ.$TRUE.AND.FPROBE.NE.-1
+     |   PPFUN/9,91,0
+     |   PPFUN/8,'Z',0
+     |   IF/$XM.EQ.0.AND.$YM.EQ.0
+     |     PPFUN/8,'G',0
+     |     PREFUN/90,54,0
+     |     PPFUN/9,90,90
+     |     PPFUN/9,54,54
+     |     PPFUN/9,0,0
+     |     PPFUN/16,90,54,0
+     |     PPFUN/8,'G','G'
+     |     IF/$MULTAX.EQ.$TRUE
+     |       PPFUN/8,'X',0,'Y',0
+     |       PPFUN/7,'G',54,SAME,'A'
+     |     ELSE
+     |       PPFUN/7,'G',54,SAME,'X'
+     |       SAFETY/NEXT,XAXIS,YAXIS,NEXT,ZAXIS
+     |     ENDOF/IF
+     |   ENDOF/IF
+     | ENDOF/IF
+ICAM Technologies           QUEST Version 24.0-2235           27-Oct-2024 22:37
+(c) Copyright 2022                                                      Page 19
+                                   ZERA2025
+
+    5: Macro utilisateur
+     | IF/FPROBE.EQ.1
+     |   $P03(3)=FPRBDEPTH
+     |   PPFUN/8,'X',0,'Y',0,'Z',0,'F',0,'G',0
+     | ENDOF/IF
+     | IF/FPROBE.EQ.-1
+     |   IF/$P03(3).NE.0.OR.$P03(2).NE.0.OR.$P03(1).NE.0
+     |     PPFUN/8,'X',0,'Y',0,'Z',0,'F',0,'G',0
+     |   ENDOF/IF
+     | ENDOF/IF
+  6.20  Macro après mouvement: [Oui,Non] .................................. Oui
+    1: Macro utilisateur
+     | $$ cas hors retour a l origine ou 1er mvt apres retour a l origine
+     | IF/$MULTAX.EQ.$FALSE.AND.$RAPID.EQ.$TRUE.AND.$ZM.NE.0.AND.$LZM.NE.0.AND.FPROBE.NE.-1
+     |   PPFUN/8,'X','X'
+     |   PPFUN/8,'Y','Y'
+     |   PPFUN/8,'Z','Z'
+     |   IF/$ZM.LT.$LZM
+     |     PPFUN/7,'Z',$ZM,0
+     |   ELSEIF/$ZM.GT.$LZM
+     |     PPFUN/7,'X',$XM,'Y',$YM,0
+     |   ENDOF/IF
+     | ELSEIF/$MULTAX.EQ.$TRUE.AND.$RAPID.EQ.$TRUE.AND.$ZM.NE.0.AND.$LZM.NE.0.AND.FPROBE.NE.-1
+     |   PPFUN/8,'X','X'
+     |   PPFUN/8,'Y','Y'
+     |   PPFUN/8,'Z','Z'
+     |   PPFUN/8,'A','A'
+     |   PPFUN/8,'B','B'
+     |   IF/$ZM.LT.$LZM
+     |     PPFUN/7,'X',$XM,'Y',$YM,0
+     |     PPFUN/7,'Z',$ZM,0
+     |   ELSEIF/$ZM.GT.$LZM
+     |     PPFUN/7,'X',$XM,'Y',$YM,0
+     |     PPFUN/7,'A',$AM,'B',$BM,0
+     |   ENDOF/IF
+     | ENDOF/IF
+    2: Macro utilisateur
+     | $$ Cas retour a Z0
+     | IF/$RAPID.EQ.$TRUE.AND.$ZM.EQ.0.AND.FPROBE.NE.-1
+     |   IF/$XM.NE.0.OR.$YM.NE.0
+     |     PPFUN/8,'X','X','Y','Y'
+     |     IF/$XM.NE.$LXM
+     |       PPFUN/7,'X',$XM
+     |     ENDOF/IF
+     |     IF/$YM.NE.$LYM
+     |       PPFUN/7,'Y',$YM
+     |     ENDOF/IF
+     |     PPFUN/7,0
+     |     IF/$MULTAX.EQ.$TRUE
+     |       PPFUN/8,'A','A','B','B'
+     |       IF/$AM.NE.$LAM
+     |         PPFUN/7,'A',$AM
+     |       ENDOF/IF
+     |       IF/$BM.NE.$LBM
+     |         PPFUN/7,'B',$BM
+     |       ENDOF/IF
+ICAM Technologies           QUEST Version 24.0-2235           27-Oct-2024 22:37
+(c) Copyright 2022                                                      Page 20
+                                   ZERA2025
+
+     |       PPFUN/7,0
+     |     ENDOF/IF
+     |   ENDOF/IF
+     | ENDOF/IF
+    3: Macro utilisateur
+     | $$ Cas retour a O
+     | IF/$RAPID.EQ.$TRUE.AND.$ZM.EQ.0.AND.$XM.EQ.0.AND.$YM.EQ.0
+     |   PPFUN/16,91,28,0
+     |   PPFUN/9,91,91
+     |   PPFUN/9,28,28
+     |   PPFUN/9,0,0
+     |   PPFUN/8,'G','G','Z','Z'
+     |   PPFUN/7,'G',91,'G',28,'G',0,SAME,'Z'
+     |   PPFUN/7,'Z',$ZM
+     |   PPFUN/7,0
+     |   PPFUN/8,'X','X','Y','Y'
+     |   PPFUN/7,'X',0,'Y',0
+     |   PPFUN/7,0
+     |   IF/$MULTAX.EQ.$TRUE
+     |     PPFUN/8,'A','A','B','B'
+     |     PPFUN/7,'A',0,'B',0,0
+     |   ENDOF/IF
+     | ENDOF/IF
+    4: Macro utilisateur
+     | $$ $$ 1er mvt apres retour a Z0 ou a l origine (on sort x et y aue si ils changent ici)
+     | $$ IF/$LZM.EQ.0.AND.$ZM.NE.0.AND.$RAPID.EQ.$TRUE
+     | $$   IF/$MULTAX.EQ.$TRUE
+     | $$     PPFUN/8,'X','X','Y','Y'
+     | $$     IF/$XM.NE.$LXM
+     | $$       PPFUN/7,'X',$XM
+     | $$     ENDOF/IF
+     | $$     IF/$YM.NE.$LYM
+     | $$       PPFUN/7,'Y',$YM
+     | $$     ENDOF/IF
+     | $$     PPFUN/7,0
+     | $$   ENDOF/IF
+     | $$   PPFUN/8,'Z','Z'
+     | $$   PPFUN/9,43,43
+     | $$   PPFUN/7,'G',43,SAME,'Z'
+     | $$   PPFUN/7,'H',$T,SAME,'Z'
+     | $$   PPFUN/7,'Z',$ZM
+     | $$   PPFUN/7,0
+     | $$ ENDOF/IF
+    5: Macro utilisateur
+     | $$ 1er mvt apres retour a Z0 ou a l origine (on sort x et y meme si ils changent pas ici)
+     | IF/$LZM.EQ.0.AND.$ZM.NE.0.AND.$RAPID.EQ.$TRUE.AND.FPROBE.NE.-1
+     |   IF/$MULTAX.EQ.$TRUE
+     |     PPFUN/8,'X','X','Y','Y'
+     |     PPFUN/7,'X',$XM
+     |     PPFUN/7,'Y',$YM
+     |     PPFUN/7,0
+     |   ENDOF/IF
+     |   PPFUN/8,'Z','Z'
+     |   PPFUN/9,43,43
+     |   PPFUN/7,'G',43,SAME,'Z'
+     |   PPFUN/7,'H',$T,SAME,'Z'
+ICAM Technologies           QUEST Version 24.0-2235           27-Oct-2024 22:37
+(c) Copyright 2022                                                      Page 21
+                                   ZERA2025
+
+     |   PPFUN/7,'Z',$ZM
+     |   PPFUN/7,0
+     | ENDOF/IF
+    6: Macro utilisateur
+     | $$ Reactivation G1
+     | PPFUN/9,0,0,1,1,2,2,3,3,4,4,90,90,91,91,92,92,93,93,94,94,95,95
+    7: Macro utilisateur
+     | IF/FPROBE.EQ.1
+     |   $ZC=FPRBDEPTH
+     |   PPFUN/8,'X','X','Y','Y','Z','Z','F','F'
+     |   IF/$XC.NE.$LXC
+     |     PPFUN/7,'X',$XC
+     |   ENDOF/IF
+     |   IF/$XC.NE.$LXC
+     |     PPFUN/7,'Y',$YC
+     |   ENDOF/IF
+     |   IF/$XC.NE.$LXC
+     |     PPFUN/7,'Z',$ZC
+     |   ENDOF/IF
+     |   PPFUN/7,'F',FPRBFEDRAT
+     |   PPFUN/8,'G','G'
+     | ENDOF/IF
+  7.00  Macro d'opération: [Oui,Non] ...................................... Non
+  8.00  Macro de Registre: [Oui,Non] ...................................... Non
+  9.00  Macro ruban: [Oui,Non] ............................................ Non
+
+
+Éditeur de Ruban:
+
+        Aucune chaine de caracteres a trouver/remplacer n'est définie.
+
+
+Éditeur de Dialogue:
+
+        Aucun dialogue n'est défini.
+
+
+Macros sur les Mots PP:
+
+
+La syntaxe de definition BREAK.
+
+  1 : Activee
+     | BREAK/$P1,$P2,$P3
+     | PPFUN/8,'N','#N'
+     | LOADTL/$T
+     | $RAPID=$TRUE
+     | GOTO/$P1,$P2,$P3
+     | PPFUN/8,'N','N'
+     | PREFUN/1
+     | PPFUN/7,'F',$F,SAME,'X'
+ICAM Technologies           QUEST Version 24.0-2235           27-Oct-2024 22:37
+(c) Copyright 2022                                                      Page 22
+                                   ZERA2025
+
+La syntaxe de definition CLAMP.
+
+  1 : Activee
+     | CLAMP/AAXIS,$P2(ON,OFF)
+     | IF/$P2.EQ.ON
+     |   AUXFUN/68
+     | ELSEIF/$P2.EQ.OFF
+     |   AUXFUN/69
+     | ENDOF/IF
+
+  2 : Activee
+     | CLAMP/BAXIS,$P2(ON,OFF)
+     | IF/$P2.EQ.ON
+     |   AUXFUN/78
+     | ELSEIF/$P2.EQ.OFF
+     |   AUXFUN/79
+     | ENDOF/IF
+
+
+La syntaxe de definition COOLNT.
+
+  1 : Activee
+     | COOLNT/$P1(OFF,FLOOD,MIST,ON,THRU)
+     | IF/$P1.EQ.FLOOD
+     |   IF/$MULTAX.EQ.$TRUE
+     |     PPFUN/7,'M',8,SAME,'A'
+     |   ELSE
+     |     PPFUN/7,'M',8,SAME,'X'
+     |   ENDOF/IF
+     |   FCOOLNT=$TRUE
+     |   PPFUN/8,'M',0
+     |   COOLNT/FLOOD
+     |   PPFUN/8,'M','M'
+     | ELSEIF/$P1.EQ.MIST
+     |   PPFUN/7,'M',10
+     |   FCOOLNT=$TRUE
+     |   PPFUN/8,'M',0
+     |   COOLNT/MIST
+     |   PPFUN/8,'M','M'
+     | ELSEIF/$P1.EQ.THRU
+     |   PPFUN/7,'M',50
+     |   FCOOLNT=$TRUE
+     |   PPFUN/8,'M',0
+     |   COOLNT/THRU
+     |   PPFUN/8,'M','M'
+     | ELSEIF/$P1.EQ.OFF
+     |   IF/FCOOLNT.EQ.$TRUE
+     |     PPFUN/7,'M',9,SAME,'Z'
+     |     FCOOLNT=$FALSE
+     |     PPFUN/8,'M',0
+     |     COOLNT/OFF
+     |     PPFUN/8,'M','M'
+     |   ENDOF/IF
+     | ELSEIF/$P1.EQ.ON
+     |   IF/$MULTAX.EQ.$TRUE
+     |     PPFUN/7,'M',8,SAME,'A'
+ICAM Technologies           QUEST Version 24.0-2235           27-Oct-2024 22:37
+(c) Copyright 2022                                                      Page 23
+                                   ZERA2025
+
+     |   ELSE
+     |     PPFUN/7,'M',8,SAME,'X'
+     |   ENDOF/IF
+     |   PPFUN/8,'M',0
+     |   COOLNT/FLOOD
+     |   PPFUN/8,'M','M'
+     |   FCOOLNT=$TRUE
+     | ENDOF/IF
+
+
+La syntaxe de definition CYCLE.
+
+  1 : Activee
+     | $$ Le professeur a demande une macro avant cycle,
+     | $$mais pour une qlq raison, la macro avant cycle ne semble s executer que avant
+     | $$ le 2 eme mouvement a l interieur du cycle, pour le moment cette macro permet
+     | $$ de sortir la bonne profondeur, a voir avec le prof si ca pourra etre accepte
+     | $$ en tout cas il faut ameliorer la syntaxe du nom
+     | CYCLE/DEEP,DEPTH,$P1,STEP,$P2,IPM,$P3,CLEAR,$P4
+     | DECLAR/GLOBAL,REAL,ZCYCLE
+     | ZCYCLE=$P1+$ZM
+     | CYCLE/DEEP,DEPTH,ZCYCLE,STEP,$P2,IPM,$P3,CLEAR,$P4
+
+
+La syntaxe de definition GOPARK.
+
+  1 : Activee
+     | GOPARK
+     | $RAPID=$TRUE
+     | GOTO/$XC,$YC,0
+     | DISPLY/'OPERATEUR : SVP verifiez l usure d outil'
+     | PPFUN/7,0
+     | AUXFUN/1
+     | PPFUN/7,0
+     | PREFUN/0
+
+
+La syntaxe de definition INDEX.
+
+  1 : Activee
+     | INDEX/$P1
+     | SEQNO/OFF
+     | IF/$P1.LE.6300
+     |   PPFUN/7,0,'O',$P1,0
+     | ELSE
+     |   PPFUN/3,1,'Le numero de programme O doit etre inferieur a 6300'
+     |   PPFUN/7,0,'O',0,0
+     | ENDOF/IF
+     | SEQNO/ON
+
+
+La syntaxe de definition INSERT.
+
+  1 : Activee
+     | INSERT/$P1*
+     | PPFUN/7,0
+ICAM Technologies           QUEST Version 24.0-2235           27-Oct-2024 22:37
+(c) Copyright 2022                                                      Page 24
+                                   ZERA2025
+
+La syntaxe de definition PREFUN.
+
+  1 : Activee
+     | PREFUN/$P1
+     | IF/$P1.EQ.10
+     |   PPFUN/3,7,'Le code G utilise n existe pas'
+     | ELSE
+     |   PPFUN/7,'G',$P1
+     | ENDOF/IF
+
+
+La syntaxe de definition PROBE.
+
+  1 : Deactivee
+     | PROBE/PART,ON,RAXIS,$P1,LENGTH,$P2,LENGTH,$P3,WIDTH,$P4,DEPTH,$P5,CAXIS,$P6,AAXIS,$P7,[IPM,$P8],[RPM,$P9],[IPM,$P10],[IPM,$P11]
+     | FPROBE=1
+     | FPRBDEPTH=$P5
+     | DECLAR/GLOBAL,REAL,E,U,V,F
+     | E=$F
+     | U=$S
+     | V=$F
+     | FPRBFEDRAT=$F
+     | IF/$P8.NE.$NULL
+     |   E=$P8
+     | ENDOF/IF
+     | IF/$P9.NE.$NULL
+     |   U=$P9
+     | ENDOF/IF
+     | IF/$P10.NE.$NULL
+     |   V=$P10
+     | ENDOF/IF
+     | IF/$P11.NE.$NULL
+     |   FPRBFEDRAT=$P11
+     | ENDOF/IF
+     | FEDRAT/FPRBFEDRAT,IPM
+     | PPFUN/8,'G',0
+     | PPFUN/7,'G3',28,SAME,'X'
+     | PPFUN/7,'R',$P1,'I',$P2,'J',$P3,'K',$P4,'Q',$P5,'C',$P6,'As1.2s',$P7,'D',$T,SAME,'X'
+     | PPFUN/7,'E',E,'U',U,'V',V,SAME,'X'
+     | PPFUN/7,0
+     | PPFUN/8,'G','G'
+
+  2 : Deactivee
+     | PROBE/PART,OFF
+     | FPROBE=-1
+     | DISPLY/'Veuillez mesurer votre cavite SVP'
+     | AUXFUN/0
+     | PPFUN/8,'X',0,'Y',0,'Z',0,'F',0,'G',0
+     | $$IF/$NT.NE.0
+     | $$  LOADTL/$NT
+     | $$ENDOF/IF
+     | $$FINI
+ICAM Technologies           QUEST Version 24.0-2235           27-Oct-2024 22:37
+(c) Copyright 2022                                                      Page 25
+                                   ZERA2025
+
+La syntaxe de definition SPINDL.
+
+  1 : Activee
+     | SPINDL/$P1(RPM,SFM),[$P2],[$P3()]
+     | PPFUN/8,'S','S'
+     | PPFUN/-9,3,3
+     | PPFUN/-9,4,4
+     | IF/$P3.EQ.CCLW
+     |   PPFUN/7,0
+     |   PPFUN/7,'S',$P2,'M',4,0
+     | ELSE
+     |   PPFUN/7,0
+     |   PPFUN/7,'S',$P2,'M',3,0
+     | ENDOF/IF
+     | PPFUN/8,'S',0
+     | PPFUN/-9,3,-1
+     | PPFUN/-9,4,-1
+     | SPINDL/$P1,$P2,$P3
+
+  2 : Activee
+     | SPINDL/OFF
+     | PPFUN/7,'M',5,SAME,'Z'
+     | $SMODE=0
+
+
+La syntaxe de definition TMARK.
+
+  1 : Activee
+     | TMARK/CM,$P1,AT,$P2,BAR,$P3,ON,$P4,OD,$P5,IN,$P6,ID,$P7,OUT,$P8,[IPM,$P9],[RPM,$P10],[PA,$P11],[UP,$P12]
+     | FPROBE=1
+     | FPRBDEPTH=$P1
+     | DECLAR/GLOBAL,REAL,E,U,V,F
+     | E=$F
+     | U=$S
+     | V=$F
+     | FPRBFEDRAT=$F
+     | IF/$P9.NE.$NULL
+     |   E=$P9
+     | ENDOF/IF
+     | IF/$P10.NE.$NULL
+     |   U=$P10
+     | ENDOF/IF
+     | IF/$P11.NE.$NULL
+     |   V=$P11
+     | ENDOF/IF
+     | IF/$P12.NE.$NULL
+     |   FPRBFEDRAT=$P12
+     | ENDOF/IF
+     | PPFUN/8,'G',0
+     | PPFUN/7,'G3',28,SAME,'X'
+     | PPFUN/7,'R',$P2,'I',$P3,'J',$P4,'K',$P5,'Q',$P6,'C',$P7,'As1.2s',$P8,'D',$T,SAME,'X'
+     | PPFUN/7,'E',E,'U',U,'V',V,SAME,'X'
+     | PPFUN/7,0
+     | PPFUN/8,'G','G'
+ICAM Technologies           QUEST Version 24.0-2235           27-Oct-2024 22:37
+(c) Copyright 2022                                                      Page 26
+                                   ZERA2025
+
+  2 : Activee
+     | TMARK/OFF
+     | FPROBE=-1
+     | DISPLY/'Veuillez mesurer votre cavite SVP'
+     | AUXFUN/0
+     | PPFUN/8,'X',0,'Y',0,'Z',0,'F',0,'G',0
+     | $$IF/$NT.NE.0
+     | $$  LOADTL/$NT
+     | $$ENDOF/IF
+     | $$FINI
+
+
+File Storage:
+
+        Aucun fichier n'a ete transferre
+ICAM Technologies           QUEST Version 24.0-2235           27-Oct-2024 22:37
+(c) Copyright 2022                                                      Page 27
+                                   ZERA2025
+
+                            Sommaire des registres
+
+                                      "."  SupprimSupprim  "+"     Registre
+          Etat Positio  Nom   FormatNecess. Avant  Apres Necess.  Descripteur
+
+         Actif     1     O     4.0    Non    Non    Non    Non        O4
+         Actif     2     #N    2.0    Non    Non    Non    Non        #N2
+         Actif     3     N     5.0    Non    Oui    Non    Non        Ns5
+         Actif     4     G     2.0    Non    Non    Non    Non        G2
+         Actif     5     G3    2.0    Non    Non    Non    Non        G32
+
+         Actif     6     X     3.4    Oui    Oui    Oui    Non      Xs3.4s
+         Actif     7     Y     3.4    Oui    Oui    Oui    Non      Ys3.4s
+         Actif     8     Z     3.4    Oui    Oui    Oui    Non      Zs3.4s
+         Actif     9     W     3.4    Oui    Oui    Oui    Non      Ws3.4s
+         Actif    10     A     4.3    Oui    Oui    Oui    Non      As4.3s
+
+         Actif    11     A     1.2    Oui    Oui    Oui    Non      As1.2s
+         Actif    12     B     4.3    Oui    Oui    Oui    Non      Bs4.3s
+         Actif    13     I     3.4    Oui    Oui    Oui    Non      Is3.4s
+         Actif    14     J     3.4    Oui    Oui    Oui    Non      Js3.4s
+         Actif    15     K     3.4    Oui    Oui    Oui    Non      Ks3.4s
+
+         Actif    16     R     3.4    Oui    Oui    Oui    Non      Rs3.4s
+         Actif    17     R     2.1    Oui    Oui    Non    Non       Rs2.1
+         Actif    18     C     3.4    Oui    Oui    Oui    Non      Cs3.4s
+         Actif    19     P     2.3    Non    Oui    Non    Non       Ps23
+         Actif    20     D     2.0    Non    Oui    Non    Non        Ds2
+
+         Actif    21     E     3.1    Oui    Oui    Oui    Non      Es3.1s
+         Actif    22     U     5.0    Non    Oui    Non    Non        Us5
+         Actif    23     U     5.0    Non    Oui    Non    Non        Us5
+         Actif    24     V     3.2    Oui    Oui    Oui    Non      Vs3.2s
+         Actif    25     V     3.4    Oui    Oui    Oui    Non      Vs3.4s
+
+         Actif    26     Q     3.4    Oui    Oui    Oui    Non      Qs3.4s
+         Actif    27     F     3.1    Oui    Oui    Oui    Non      Fs3.1s
+         Actif    28     F     5.3    Oui    Oui    Non    Non       Fs5.3
+         Actif    29     S     5.0    Non    Oui    Non    Non        Ss5
+         Actif    30     T     2.0    Non    Oui    Non    Non        Ts2
+
+         Actif    31     H     2.0    Non    Oui    Non    Non        Hs2
+         Actif    32     L     2.0    Non    Oui    Non    Non        Ls2
+         Actif    33     M     3.0    Non    Oui    Non    Non        Ms3
+ICAM Technologies           QUEST Version 24.0-2235           27-Oct-2024 22:37
+(c) Copyright 2022                                                      Page 28
+                                   ZERA2025
+
+                            Sommaire des codes "G"
+
+Code                                                                Description
+
+   0 ................................................. Positionnement en rapide
+   1 ................................................... Interpolation linéaire
+   2 .............................. Interpolation circulaire antihoraire (CCLW)
+   3 ................................... Interpolation circulaire horaire (CLW)
+   4 ......................................................... DELAY (secondes)
+
+  17 .................................... Choix du Plan XY pour l'interpolation
+  18 .................................... Choix du Plan ZX pour l'interpolation
+  19 .................................... Choix du Plan YZ pour l'interpolation
+  28 .................................... Positionnement au point de référence.
+  40 ........................................... Annulation correction de rayon
+
+  41 ............................................. Correction de rayon à gauche
+  42 ............................................. Correction de rayon à droite
+  53 .............................................. Code retour origine absolue
+  54 ................................... Plus petit code système de coordonnées
+  59 .................................... Plus haut code système de coordonnées
+
+  71 ............................................ Cycle perçage multiple : THRU
+  73 ..................................... Cycle perçage brise copeaux : BRKCHP
+  74 ........................................... Cycle de Taraudage inverse TAP
+  80 ............................................................. Fin de Cycle
+  81 ................................................... Cycle de perçage DRILL
+
+  82 .................................................. Cycle de chambrage FACE
+  83 ............................................. Cycle perçage profond : DEEP
+  84 ................................................... Cycle de Taraudage TAP
+  85 ............................................... Cycle d'Alésage fin : REAM
+  86 ..................................................... Cycle d'alésage BORE
+
+  87 ................................. Cycle d'alésage avec arrêt broche indexé
+  88 ........................ Cycle d'alésage avec temporisation: BORE et DWELL
+  89 .................. Cycle d'alésage fin avec temporisation: REAM avec DWELL
+  90 .................................................... Programmation absolue
+  91 ................................................... Programmation relative
+
+  93 ..................................................... Code d'avance en 1/T
+  94 ..................................................... Code d'avance en uPM
+  95 ..................................................... Code d'avance en uPR
+  98 ................................. Retour position initiale en fin de cycle
+  99 ............................................ Retour plan-R en fin de cycle
+ICAM Technologies           QUEST Version 24.0-2235           27-Oct-2024 22:37
+(c) Copyright 2022                                                      Page 29
+                                   ZERA2025
+
+                            Sommaire des codes "M"
+
+Code                                                                Description
+
+   0 .......................................................... Arrêt programme
+   1 ............................................ Arrêt facultatif du programme
+   2 ......................................................... Fin de programme
+   3 ................................................ Broche sens horaire (CLW)
+   4 ........................................... Broche sens antihoraire (CCLW)
+
+   5 .................................................... Arrêt rotation broche
+   6 ........................................... Chargement d'outil automatique
+   8 ................................................. Arrosage par jet (FLOOD)
+   9 ............................................................. Arrosage OFF
+  10 ........................................... Arrosage par brouillard (MIST)
+
+  19 .......................................................... Indexage broche
+  30 ................................................................... REWIND
+ 
