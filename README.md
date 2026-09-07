@@ -1,8 +1,10 @@
-# Post-processeur multiaxes CAM-POST
+# FAO / CNC — Post-processeur 3 et 5 axes avec CAM-POST
 
 **FAO · Programmation CNC · Post-traitement · Macros · Usinage 3 et 5 axes**
 
-Projet individuel d'**Alae Zerrouq**, réalisé en maîtrise à **l'ÉTS Montréal**, dans le cours **SYS856 — Fabrication assistée par ordinateur**, à l'**automne 2024**.
+J’ai développé ce post-processeur dans le cadre de ma maîtrise à **l’ÉTS Montréal**, pour le cours **SYS856 — Fabrication assistée par ordinateur**, à l’**automne 2024**.
+
+**Alae ZERROUQ** · Projet individuel · FAO · CNC · CAM-POST · Chaîne CAO/FAO
 
 ## Objectif
 
@@ -10,7 +12,7 @@ Adapter le post-traitement de trajectoires FAO à une machine multiaxe : transfo
 
 La machine cible présentée dans le projet est une **Hitachi-Seiki 5 axes**. Le dépôt contient la base du post-processeur, un questionnaire de configuration, des cas d'essai et le rapport original.
 
-## Compétences démontrées
+## Mes compétences mises en pratique
 
 | Domaine | Éléments consultables |
 |---|---|
